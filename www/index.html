@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles\css\main.css">
+  <title>Отель Белый Лотос</title>
+</head>
+<body>
+  <div class="navi-container">
+    <header class="navi">
+      <a class="navi-link" href="#"><h4>contact@whitelotus.ru</h4></a>
+      <a class="navi-link" href="#"><h4>ГЛАВНАЯ</h4></a>
+      <a class="navi-link" href="/Projects/white_lotus_www/www/about_us.html"><h4>О НАС</h4></a>
+      <a class="navi-link" href="#"><h4>НОМЕРА</h4></a>
+      <a class="navi-link" href="#"><h4>ОТЗЫВЫ</h4></a>
+      <a class="navi-link" href="#"><h4>ГАЛЕРЕЯ</h4></a>
+      <a class="navi-link" href="#"><h4>КОНТАКТЫ</h4></a>
+      <a class="navi-link" href="#"><h4>+7 (982) 220-10-10</h4></a>
+    </header>
+    <button id="order-btn">Забронировать</button>
+  </div>
+  <div class="container">
+    <div class="logo-container">
+      <img id="logo-img" src="img/logo/logo.png" alt="logo">
+      <img id="hotel-word" src="img/logo/hotel.png" alt="hotel">
+      <img id="white-lotus-word" src="img/logo/white-lotus.png" alt="hotel">
+      <img id="motto-word" src="img/logo/motto.png" alt="hotel">
+    </div>
+    <div class="about-us-container">
+      <h1>О нас</h1>
+      <div class="features-table">
+        <div class="feature" id="dislocation-feature">
+          <img src="img/features/map-point.png" alt="map-point">
+          <div class="txt-container">
+            <h2>Удобное расположение</h2>
+            <h3>От отеля до песчаного пляжа всего 250 метров</h3>
+            <a href="#">Карта</a>
+          </div>
+        </div>
+        <div class="feature" id="rooms-feature">
+          <img src="img/features/people.png" alt="people">
+          <div class="txt-container">
+            <h2>Просторные номера</h2>
+            <h3>Однокомнатные и двухкомнатные номера с возможностью размещения до 6 человек</h3>
+            <a href="#">Номера</a>
+          </div>
+        </div>
+        <div class="feature" id="kitchen-feature">
+          <img src="img/features/kitchen.png" alt="kitchen">
+          <div class="txt-container">
+            <h2>Оснащенная кухня</h2>
+            <h3>На общей кухне есть все необходимое для готовки оборудование</h3>
+            <a href="#">Смотреть</a>
+          </div>
+        </div>
+        <div class="feature" id="wi-fi-feature">
+          <img src="img/features/wi-fi.png" alt="wi-fi">
+          <div class="txt-container">
+            <h2>Бесплатный Wi-Fi</h2>
+            <h3>Wi-Fi доступен на всей
+              территории отеля</h3>
+            <a href="#">Пароль</a>
+          </div>
+        </div>
+        <div class="feature" id="terrace-feature">
+          <img src="img/features/terrace.png" alt="terrace">
+          <div class="txt-container">
+            <h2>Уютная терраса</h2>
+            <h3>Открытая терраса с удобными диванами и прочей уличной мебелью</h3>
+            <a href="#">Смотреть</a>
+          </div>
+        </div>
+        <div class="feature" id="parking-feature">
+          <img src="img/features/parking.png" alt="parking">
+          <div class="txt-container">
+            <h2>Автостоянка рядом</h2>
+            <h3>Места парковки на территории отеля</h3>
+            <a href="#">Карта</a>
+          </div>
+        </div>
+      </div>
+      <div class="main-txt-container">
+        <div class="paragraph-container">
+          <h2>Новый уютный отель 2022 года постройки</h2>
+          <h3>Комфортабельные номера со всеми удобствами и городским водопроводом. В номерах двуспальные и односпальные кровати, дополнительные спальные места по желанию, сейфы для хранения ценных вещей, балконы с которых открывается вид на Азовское море.<br>
+            Санузлы оборудованы просторными душевыми кабинами, индивидуальными нагревателями воды, а также имеется зеркало с подсветкой, фен и туалетные принадлежности.</h3>
+        </div>
+        <div class="paragraph-container">
+          <h2>Большая столовая-кухня</h2>
+          <h3>Кухонное пространство борудовано всем необходимым для самостоятельного приготовления пищи — варочные панели, духовка, СВЧ, мангалы, столовая посуда и приборы, кофе-машина и прочая мелкая техника.<br>
+            Из столовой можно выйти на открытую террасу.<br>
+            Стиральная машина<br>
+            Гладильная доска</h3>
+        </div>
+      </div> 
+    </div>
+    <div class="rooms-container">
+      <h1>Номера</h1>
+      <div class="rooms-buttons-chain">
+        <button class="rooms-dot" onclick="currentRoom(1)">Стандарт</button>
+        <button class="rooms-dot" onclick="currentRoom(2)">Стандарт+</button>
+        <!--<button class="rooms-dot" onclick="currentRoom(3)">Семейный</button>
+        <button class="rooms-dot" onclick="currentRoom(4)">Семейный+</button>-->
+      </div>
+
+
+      <div class="room-info-block fade">
+        <div class="room-info-container fade">
+          <div class="slider-container">
+            <img class="img-slides fade" src="img/rooms/family_plus/bedroom_1.jpg">
+            <img class="img-slides fade" src="img/rooms/family_plus/bedroom_1_rev.jpg">
+            <img class="img-slides fade" src="img/rooms/family_plus/bedroom_2_rev.jpg">
+            <img class="img-slides fade" src="img/rooms/family_plus/bedroom_2.jpg">
+            <img class="img-slides fade" src="img/rooms/family_plus/bathroom.jpg">
+            <button class="prev" onclick="plusSlides(-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+            <button class="next" onclick="plusSlides(1)"><img src="img/icons/buttons/next-icon.svg"></button>
+            <div class="counter-container">
+              <span class="counter-dot" onclick="currentSlide(1)"></span>
+              <span class="counter-dot" onclick="currentSlide(2)"></span>
+              <span class="counter-dot" onclick="currentSlide(3)"></span>
+              <span class="counter-dot" onclick="currentSlide(4)"></span>
+              <span class="counter-dot" onclick="currentSlide(5)"></span>
+            </div>
+          </div>
+          <div class="room-txt-container">
+            <h1>Семейный</h1>
+            <div class="room-descript-container">
+              <h3>
+                В номере для вас:<br>
+                • Двухместная кровать<br>
+                • Две одноместных кровати<br>
+                • Кондиционеры<br>
+                • LED телевизоры 32’<br>
+                • Холодильник<br>
+                • Туалетный столик<br>
+                • Два пуфа-трансформера<br>
+                • Комод<br>
+                • Санузел с душевой кабиной<br>
+                • Фен<br>
+                • Сушилка для белья<br>
+                • Летние стол и стул на балконе<br>
+                • Шкаф<br>
+                • Вешалка с обувницей<br>
+              </h3>
+            </div>
+            <div class="order-button-container">
+              <button>Цены</button>
+              <button>Забронировать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="room-info-block fade">
+        <div class="room-info-container">
+          <div class="slider-container">
+            <img class="img-slides fade" src="img/rooms/standart/hall.jpg">
+            <img class="img-slides fade" src="img/rooms/standart/bedroom_1.jpg">
+            <img class="img-slides fade" src="img/rooms/standart/bedroom_2.jpg">
+            <img class="img-slides fade" src="img/rooms/standart/bedroom_3.jpg">
+            <img class="img-slides fade" src="img/rooms/standart/bathroom.jpg">
+            <button class="prev" onclick="plusSlides(-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+            <button class="next" onclick="plusSlides(1)"><img src="img/icons/buttons/next-icon.svg"></button>
+            <div class="counter-container">
+              <span class="counter-dot" onclick="currentSlide(1)"></span>
+              <span class="counter-dot" onclick="currentSlide(2)"></span>
+              <span class="counter-dot" onclick="currentSlide(3)"></span>
+              <span class="counter-dot" onclick="currentSlide(4)"></span>
+              <span class="counter-dot" onclick="currentSlide(5)"></span>
+            </div>
+          </div>
+          <div class="room-txt-container">
+            <h1>Стандарт</h1>
+            <div class="room-descript-container">
+              <h3>
+                В номере для вас:<br>
+                • Двухместная кровать<br>
+                • Две одноместных кровати<br>
+                • Кондиционеры<br>
+                • LED телевизоры 32’<br>
+                • Холодильник<br>
+                • Туалетный столик<br>
+                • Два пуфа-трансформера<br>
+                • Комод<br>
+                • Санузел с душевой кабиной<br>
+                • Фен<br>
+                • Сушилка для белья<br>
+                • Летние стол и стул на балконе<br>
+                • Шкаф<br>
+                • Вешалка с обувницей<br>
+              </h3>
+            </div>
+            <div class="order-button-container">
+              <button>Цены</button>
+              <button>Забронировать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="scripts\slider.js"></script>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="copyright-container">
+        <h3>© Белый Лотос, 2023 г. - официальный сайт</h3>
+      </div>
+      <div class="socmed-container">
+        <img src="img/icons/social-medias/vk_icon.svg" alt="vk">
+        <img src="img/icons/social-medias/telegram_icon.svg" alt="telegram">
+        <img src="img/icons/social-medias/insta_icon.svg" alt="inst">
+        <img src="img/icons/social-medias/fb_icon.svg" alt="facebook">
+      </div>
+      <div class="contacts-container">
+        <h3>+7 (982) 220-10-10</h3>
+        <h3>whitelotushotel@yandex.ru</h3>
+        <h3>Краснодарский край, Кучугуры, ул. Благополучия 13</h3>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
