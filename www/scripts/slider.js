@@ -1,58 +1,58 @@
-//Rooms sections carousel
+var rooms = document.getElementsByClassName("room-info-block");
+var roomsId = [];
+var slides = document.getElementsByClassName("img-slides");
 
-var roomIndex = 1;
-showRoom(roomIndex);
+rooms_base();
 
-function currentRoom(m){
-    showRoom(roomIndex = m)
+function rooms_base(){
+
+    for (i=0;i<rooms.length;i++){
+        roomsId.push(rooms[i].id);
+    };
+
+    var currentRoomId = "room-index-1";
+    showRoom(currentRoomId);
+}
+
+function currentRoom(n){
+    showRoom(currentRoomId = "room-index-"+String(n));
 }
 
 function showRoom(m){
-    var j;
-    var rooms = document.getElementsByClassName("room-info-block");
-    var roomDots = document.getElementsByClassName("rooms-dot");
 
-    for (j = 0; j < rooms.length; j++){
-        rooms[j].style.display = "none";
-    }
-    rooms[roomIndex-1].style.display = "block";
+    for(i=0;i<rooms.length;i++){
+        if (i+1 == Number(m.slice(-1))){
+            rooms[i].style.display = "block";
+        }
+        else {
+            rooms[i].style.display = "none";
+        }
+    };
+
+    currentSlide(m,1);
 }
 
-
-//Room's galery slider
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n){
-    showSlides(slideIndex += n)
+function currentSlide(r_index, s_index){
+    showSlide(r_index, s_index);
 }
 
-function currentSlide(n){
-    showSlides(slideIndex = n);
-}
+function showSlide(room, currentSlide){
+    var slidesId = [];
+    for(j=0;j<slides.length;j++){
+        slides[j].style.display = "none";
+    };
 
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("img-slides");
-    var dots = document.getElementsByClassName("counter-dot");
+    for(j=0;j<slides.length;j++){
+        let slideId = slides[j].id;
+        let roomId = room;
+        if (slideId.slice(-1)==roomId.slice(-1)){
+            slidesId.push(slides[j]);
+        }
+    };
 
-    if (n > slides.length){
-        slideIndex = 1;
-    }
-
-    if (n < 1){
-        slideIndex = slides.length;
-    }
-
-    for (i = 0; i < slides.length; i++){
-        slides[i].style.display = "none";
-    }
-
-    for (i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace("active","");
-    }
-
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    for (j=0;j<slidesId.length;j++){
+        if (j==currentSlide-1){
+            slidesId[j].style.display = "block";
+        }
+    };
 }
