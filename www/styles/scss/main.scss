@@ -5,6 +5,10 @@ $dark-color: #353535;
 $grey-color: #A9A9A9;
 $disabled-accent-color: #73CD97;
 $shadow: 0px 0px 5px 0px rgba(0, 0, 0, .25);
+$border-radius-h1: 60px;
+$border-radius-h2: 30px;
+$border-radius-buttons: 17px;
+$blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 
 //Fonts settings
 @font-face {
@@ -87,7 +91,7 @@ button {
   width: fit-content;
   justify-content: center;
   align-items: center;
-  border-radius: 17px;
+  border-radius: $border-radius-buttons;
   border: none;
   background: $accent-color;
   color: $white;
@@ -131,6 +135,10 @@ button:active {
   box-shadow: $shadow;
 }
 
+.navi > a:hover > h4{
+  color: $accent-color;
+}
+
 #order-btn{
   display: inline-flex;
   padding: 19px;
@@ -138,13 +146,57 @@ button:active {
   width: fit-content;
   justify-content: center;
   align-items: center;
-  border-radius: 17px;
+  border-radius: $border-radius-buttons;
   border: none;
   font-family: $main-font;
   background: $accent-color;
   color: $white;
   font-size: 16px;
   font-weight: 600;
+}
+
+//Footer styles
+footer{
+  background-color: $accent-color;
+  display: flex;
+  width: 100%;
+  height: 160px;
+  justify-content: center;
+  align-items: end;
+  padding: 30px 0;
+}
+
+.footer-inner{
+  max-width: 2573px;
+  width: 100%;
+  margin: 0px 14%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contacts-container > h3{
+  text-align: right;
+  color: $white;
+  @media screen and (max-width: 1120px){
+    display: none;
+  }
+}
+
+.copyright-container > h3{
+  color: $white;
+  text-wrap: nowrap;
+}
+
+.socmed-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.socmed-container > img{
+  cursor: pointer;
 }
 
 //First block styles
@@ -205,7 +257,7 @@ button:active {
   max-height: 260px;
   height: 100%;
   gap: 20px;
-  border-radius: 30px;
+  border-radius: $border-radius-h2;
   background: $white;
   box-shadow: $shadow;
 }
@@ -232,6 +284,10 @@ button:active {
   color: $grey-color;
 }
 
+.txt-container > a:hover{
+  color: $accent-color;
+}
+
 .main-txt-container{
   margin-top: 60px;
   display: flex;
@@ -246,47 +302,7 @@ button:active {
   word-wrap: normal;
 }
 
-//Footer styles
-footer{
-  background-color: $accent-color;
-  display: flex;
-  width: 100%;
-  height: 160px;
-  justify-content: center;
-  align-items: end;
-  padding: 30px 0;
-}
-
-.footer-inner{
-  max-width: 2573px;
-  width: 100%;
-  margin: 0px 14%;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-}
-
-.contacts-container > h3{
-  text-align: right;
-  color: $white;
-  @media screen and (max-width: 1120px){
-    display: none;
-  }
-}
-
-.copyright-container > h3{
-  color: $white;
-  text-wrap: nowrap;
-}
-
-.socmed-container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 15px;
-}
-
-//Room block styles
+//Rooms block styles
 .rooms-buttons-chain{
   display: flex;
   gap: 30px;
@@ -304,7 +320,7 @@ footer{
 .rooms-container{
   width: 100%;
   display: flex;
-  margin-top: 240px;
+  padding-top: 120px;
   margin-bottom: 120px;
   align-items: center;
   flex-direction: column;
@@ -332,7 +348,7 @@ footer{
   gap: 25px;
   background-color: $white;
   border-radius: 30px 18px 30px 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: $blocks-shadow;
   width: 600px;
   padding: 0 60px 55px 60px;
 }
@@ -380,8 +396,8 @@ footer{
   align-content: flex-start;
   gap: 30px;
   flex-wrap: wrap;
-  border-radius: 60px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+  border-radius: $border-radius-h1;
+  box-shadow: $blocks-shadow;
 }
 
 .slider-container{
@@ -391,7 +407,7 @@ footer{
 
 .slider-container > img{
   width: 100%;
-  border-radius: 30px;
+  border-radius: $border-radius-h2;
 }
 
 .prev, .next{
@@ -484,4 +500,13 @@ footer{
   width: fit-content;
   flex-direction: row;
   gap: 15px
+}
+
+//Reviews block styles
+.reviews-list{
+  display: flex;
+  min-width: 800px;
+  min-height: 180px;
+  box-shadow: $blocks-shadow;
+  border-radius: $border-radius-h2;
 }

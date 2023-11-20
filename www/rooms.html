@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles\css\main.css">
+  <title>Отель Белый Лотос</title>
+</head>
+<body>
+  <div class="container">
+    <div class="navi-container">
+      <header class="navi">
+        <a class="navi-link" href="#"><h4>contact@whitelotus.ru</h4></a>
+        <a class="navi-link" href="index.html"><h4>О НАС</h4></a>
+        <a class="navi-link" href="rooms.html"><h4>НОМЕРА</h4></a>
+        <a class="navi-link" href="#"><h4>ОТЗЫВЫ</h4></a>
+        <a class="navi-link" href="#"><h4>ГАЛЕРЕЯ</h4></a>
+        <a class="navi-link" href="#"><h4>КОНТАКТЫ</h4></a>
+        <a class="navi-link" href="#"><h4>+7 (982) 220-10-10</h4></a>
+      </header>
+      <button id="order-btn">Забронировать</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="rooms-container">
+        <h1>Номера</h1>
+        <div class="rooms-buttons-chain">
+          <button class="rooms-dot" onclick="currentRoom(1)">Стандарт</button>
+          <button class="rooms-dot" onclick="currentRoom(2)">Стандарт+</button>
+          <button class="rooms-dot" onclick="currentRoom(3)">Семейный</button>
+          <button class="rooms-dot" onclick="currentRoom(4)">Семейный+</button>
+        </div>
+  
+  
+        <div class="prices-table-cotainer fade" id="prices-overlay-1">
+          <div class="prices-table-block">
+            <button class="exit-button" onclick="closePricesOverlay('prices-overlay-1')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
+            <h1>Таблица цен Стандарт</h1>
+            <div class="prices-table">
+              <div class="month-price-container">
+                <h5>1 июня - 15 июня</h5>
+                <h3>2500 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>16 июня - 28 июля</h5>
+                <h3>3000 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>29 июня - 4 августа</h5>
+                <h3>2750 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>5 августа - 30 августа</h5>
+                <h3>2000 ₽/сут.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="prices-table-cotainer fade" id="prices-overlay-2">
+          <div class="prices-table-block">
+            <button class="exit-button" onclick="closePricesOverlay('prices-overlay-2')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
+            <h1>Таблица цен Стандарт+</h1>
+            <div class="prices-table">
+              <div class="month-price-container">
+                <h5>1 июня - 15 июня</h5>
+                <h3>3000 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>16 июня - 28 июля</h5>
+                <h3>3800 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>29 июня - 4 августа</h5>
+                <h3>3500 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>5 августа - 30 августа</h5>
+                <h3>2500 ₽/сут.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="prices-table-cotainer fade" id="prices-overlay-3">
+          <div class="prices-table-block">
+            <button class="exit-button" onclick="closePricesOverlay('prices-overlay-3')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
+            <h1>Таблица цен Семейный</h1>
+            <div class="prices-table">
+              <div class="month-price-container">
+                <h5>1 июня - 15 июня</h5>
+                <h3>4000 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>16 июня - 28 июля</h5>
+                <h3>4500 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>29 июня - 4 августа</h5>
+                <h3>4250 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>5 августа - 30 августа</h5>
+                <h3>3000 ₽/сут.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="prices-table-cotainer fade" id="prices-overlay-4">
+          <div class="prices-table-block">
+            <button class="exit-button" onclick="closePricesOverlay('prices-overlay-4')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
+            <h1>Таблица цен Семейный+</h1>
+            <div class="prices-table">
+              <div class="month-price-container">
+                <h5>1 июня - 15 июня</h5>
+                <h3>5000 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>16 июня - 28 июля</h5>
+                <h3>5500 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>29 июня - 4 августа</h5>
+                <h3>5000 ₽/сут.</h3>
+              </div>
+              <div class="month-price-container">
+                <h5>5 августа - 30 августа</h5>
+                <h3>4000 ₽/сут.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="room-info-block fade" id="room-index-1">
+          <div class="room-info-container fade">
+            <div class="slider-container">
+              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/hall.jpg">
+              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/bedroom_1.jpg">
+              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/bedroom_2.jpg">
+              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/bedroom_3.jpg">
+              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/bathroom.jpg">
+              <button class="prev" onclick="plusSlides('1',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+              <button class="next" onclick="plusSlides('1',1)"><img src="img/icons/buttons/next-icon.svg"></button>
+              <div class="counter-container">
+                <span class="counter-dot" id="dot-index-1" onclick="currentSlide('room-index-1',1)"></span>
+                <span class="counter-dot" id="dot-index-1" onclick="currentSlide('room-index-1',2)"></span>
+                <span class="counter-dot" id="dot-index-1" onclick="currentSlide('room-index-1',3)"></span>
+                <span class="counter-dot" id="dot-index-1" onclick="currentSlide('room-index-1',4)"></span>
+                <span class="counter-dot" id="dot-index-1" onclick="currentSlide('room-index-1',5)"></span>
+              </div>
+            </div>
+            <div class="room-txt-container">
+              <div class="room-descript-container">
+                <h1>Стандарт</h1>
+                <h3>
+                  В однокомнатном номере для вас:<br>
+                  • Двухместная кровать<br>
+                  • Кондиционер<br>
+                  • LED телевизоры 32″<br>
+                  • Холодильник<br>
+                  • Туалетный столик или комод<br>
+                  • Пуф-трансформер<br>
+                  • Санузел с душевой кабиной<br>
+                  • Фен<br>
+                  • Сушилка для белья<br>
+                  • Летние стол и стулья на лоджии<br>
+                  • Шкаф и вешалка с обувницей<br>
+                </h3>
+              </div>
+              <div class="order-button-container">
+                <button onclick="showPricesOverlay('prices-overlay-1')">Цены</button>
+                <button>Забронировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="room-info-block fade" id="room-index-2">
+          <div class="room-info-container">
+            <div class="slider-container">
+              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/hall.jpg">
+              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/bedroom_1.jpg">
+              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/bedroom_1_rev.jpg">
+              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/bedroom_2.jpg">
+              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/bedroom_2_rev.jpg">
+              <button class="prev" onclick="plusSlides('2',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+              <button class="next" onclick="plusSlides('2',1)"><img src="img/icons/buttons/next-icon.svg"></button>
+              <div class="counter-container">
+                <span class="counter-dot" id="dot-index-2" onclick="currentSlide('room-index-2',1)"></span>
+                <span class="counter-dot" id="dot-index-2" onclick="currentSlide('room-index-2',2)"></span>
+                <span class="counter-dot" id="dot-index-2" onclick="currentSlide('room-index-2',3)"></span>
+                <span class="counter-dot" id="dot-index-2" onclick="currentSlide('room-index-2',4)"></span>
+                <span class="counter-dot" id="dot-index-2" onclick="currentSlide('room-index-2',5)"></span>
+              </div>
+            </div>
+            <div class="room-txt-container">
+              <h1>Стандарт+</h1>
+              <div class="room-descript-container">
+                <h3>
+                  В  двухкомнатном номере для вас:<br>
+                  • Двухместная кровать<br>
+                  • Две одноместных кровати<br>
+                  • Кондиционеры в каждой комнате<br>
+                  • LED телевизоры 32″<br>
+                  • Холодильник<br>
+                  • Туалетный столик<br>
+                  • Пуф-трансформер<br>
+                  • Санузел с душевой кабиной<br>
+                  • Фен<br>
+                  • Сушилка для белья<br>
+                  • Летние стол и стулья на лоджии<br>
+                  • Шкаф и вешалка с обувницей<br>
+                </h3>
+              </div>
+              <div class="order-button-container">
+                <button onclick="showPricesOverlay('prices-overlay-2')">Цены</button>
+                <button>Забронировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="room-info-block fade" id="room-index-3">
+          <div class="room-info-container">
+            <div class="slider-container">
+              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_1.jpg">
+              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_1_rev.jpg">
+              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_1_rev_2.jpg">
+              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_2.jpg">
+              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_2_rev.jpg">
+              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bathroom.jpg">
+              <button class="prev" onclick="plusSlides('3',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+              <button class="next" onclick="plusSlides('3',1)"><img src="img/icons/buttons/next-icon.svg"></button>
+              <div class="counter-container">
+                <span class="counter-dot" id="dot-index-3" onclick="currentSlide('room-index-3',1)"></span>
+                <span class="counter-dot" id="dot-index-3" onclick="currentSlide('room-index-3',2)"></span>
+                <span class="counter-dot" id="dot-index-3" onclick="currentSlide('room-index-3',3)"></span>
+                <span class="counter-dot" id="dot-index-3" onclick="currentSlide('room-index-3',4)"></span>
+                <span class="counter-dot" id="dot-index-3" onclick="currentSlide('room-index-3',5)"></span>
+                <span class="counter-dot" id="dot-index-3" onclick="currentSlide('room-index-3',6)"></span>
+              </div>
+            </div>
+            <div class="room-txt-container">
+              <h1>Семейный</h1>
+              <div class="room-descript-container">
+                <h3>
+                  В двухкомнатном номере для вас:<br>
+                  • Двухместная кровать<br>
+                  • Две одноместных кровати<br>
+                  • Кондиционеры в каждой комнате<br>
+                  • LED телевизоры 32″ в каждой комнате<br>
+                  • Холодильник<br>
+                  • Туалетный столик<br>
+                  • Два пуфа-трансформера<br>
+                  • Комод<br>
+                  • Санузел с душевой кабиной<br>
+                  • Фен<br>
+                  • Сушилка для белья<br>
+                  • Летние стол и стулья на лоджии<br>
+                  • Шкаф и вешалка с обувницей<br>
+                </h3>
+              </div>
+              <div class="order-button-container">
+                <button onclick="showPricesOverlay('prices-overlay-3')">Цены</button>
+                <button>Забронировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="room-info-block fade" id="room-index-4">
+          <div class="room-info-container">
+            <div class="slider-container">
+              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bedroom_1.jpg">
+              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bedroom_1_rev.jpg">
+              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bedroom_2.jpg">
+              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bedroom_2_rev.jpg">
+              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bathroom.jpg">
+              <button class="prev" onclick="plusSlides('4',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+              <button class="next" onclick="plusSlides('4',1)"><img src="img/icons/buttons/next-icon.svg"></button>
+              <div class="counter-container">
+                <span class="counter-dot" id="dot-index-4" onclick="currentSlide('room-index-4',1)"></span>
+                <span class="counter-dot" id="dot-index-4" onclick="currentSlide('room-index-4',2)"></span>
+                <span class="counter-dot" id="dot-index-4" onclick="currentSlide('room-index-4',3)"></span>
+                <span class="counter-dot" id="dot-index-4" onclick="currentSlide('room-index-4',4)"></span>
+                <span class="counter-dot" id="dot-index-4" onclick="currentSlide('room-index-4',5)"></span>
+              </div>
+            </div>
+            <div class="room-txt-container">
+              <h1>Семейный+</h1>
+              <div class="room-descript-container">
+                <h3>
+                  В двухкомнатном номере 40 м² для вас:<br>
+                  • Двухместная кровать<br>
+                  • Две одноместных кровати<br>
+                  • Кондиционеры в каждой комнате<br>
+                  • LED телевизоры 32″ в каждой комнате<br>
+                  • Холодильник<br>
+                  • Туалетный столик<br>
+                  • Два пуфа-трансформера<br>
+                  • Комод<br>
+                  • Санузел с душевой кабиной<br>
+                  • Фен<br>
+                  • Сушилка для белья<br>
+                  • Летние стол и стулья на лоджии<br>
+                  • Шкаф и вешалка с обувницей<br>
+                </h3>
+              </div>
+              <div class="order-button-container">
+                <button onclick="showPricesOverlay('prices-overlay-4')">Цены</button>
+                <button>Забронировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src="scripts/prices_overlay.js"></script>
+  <script src="scripts\room_slider.js"></script>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="copyright-container">
+        <h3>© Белый Лотос, 2023 г. - официальный сайт</h3>
+      </div>
+      <div class="socmed-container">
+        <img src="img/icons/social-medias/vk_icon.svg" alt="vk">
+        <img src="img/icons/social-medias/telegram_icon.svg" alt="telegram">
+        <img src="img/icons/social-medias/insta_icon.svg" alt="inst">
+        <img src="img/icons/social-medias/fb_icon.svg" alt="facebook">
+      </div>
+      <div class="contacts-container">
+        <h3>+7 (982) 220-10-10</h3>
+        <h3>whitelotushotel@yandex.ru</h3>
+        <h3>Краснодарский край, Кучугуры, ул. Благополучия 13</h3>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
