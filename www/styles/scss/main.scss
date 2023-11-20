@@ -3,6 +3,7 @@ $white: #F9F9F9;
 $accent-color: #46BF76;
 $dark-color: #353535;
 $grey-color: #A9A9A9;
+$disabled-accent-color: #73CD97;
 $shadow: 0px 0px 5px 0px rgba(0, 0, 0, .25);
 
 //Fonts settings
@@ -24,7 +25,7 @@ $shadow: 0px 0px 5px 0px rgba(0, 0, 0, .25);
 
 $main-font: NT Somic;
 
-h1,h2,h3,h4 {
+h1,h2,h3,h4,h5 {
   font-family: $main-font;
   line-height: 120%;
   color: $dark-color;
@@ -45,8 +46,12 @@ h3{
 }
 
 h4{
-  font-family: $main-font;
   font-size: 16px;
+  font-weight: 400;
+}
+
+h5{
+  font-size: 24px;
   font-weight: 400;
 }
 
@@ -74,6 +79,32 @@ body, html{
   margin: auto;
 }
 
+button {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 15px 20px;
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  border-radius: 17px;
+  border: none;
+  background: $accent-color;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button:hover {
+  transition: box-shadow .2s ease;
+  box-shadow: inset 0px -5px 7px rgba(0, 0, 0, .15);
+}
+
+button:active {
+  transition: none;
+  box-shadow: inset 0px 5px 7px rgba(0, 0, 0, .15);
+}
+
 //Navigation bar styles
 .navi-container {
   z-index: 1000;
@@ -86,6 +117,7 @@ body, html{
   white-space: nowrap;
   gap: 30px;
 }
+
 .navi{
   display: flex;
   flex-wrap: wrap;
@@ -254,7 +286,21 @@ footer{
   gap: 15px;
 }
 
-//Rooms block styles
+//Room block styles
+.rooms-buttons-chain{
+  display: flex;
+  gap: 30px;
+}
+
+.rooms-dot {
+  background-color: $disabled-accent-color;
+  transition: background-color .2s ease;
+}
+
+.rooms-dot.active {
+  background-color: $accent-color;
+}
+
 .rooms-container{
   width: 100%;
   display: flex;
@@ -265,29 +311,61 @@ footer{
   gap: 30px;
 }
 
-button {
-  display: inline-flex;
-  padding: 15px 20px;
-  height: fit-content;
-  width: fit-content;
+.prices-table-cotainer{
+  z-index: 1001;
+  display: none; //flex
+  position: fixed;
   justify-content: center;
   align-items: center;
-  border-radius: 17px;
-  border: none;
-  background: $accent-color;
-  color: $white;
-  font-size: 16px;
-  font-weight: 600;
+  background-color: rgba(0, 0, 0, .15);
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
 }
 
-button:hover {
-  transition: box-shadow .2s ease;
-  box-shadow: inset 0px -5px 7px rgba(0, 0, 0, .15);
+.prices-table-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color: $white;
+  border-radius: 30px 18px 30px 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+  width: 600px;
+  padding: 0 60px 55px 60px;
 }
 
-button:active {
-  transition: none;
-  box-shadow: inset 0px 5px 7px rgba(0, 0, 0, .15);
+.exit-button{
+  display: flex;
+  padding: 11px 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: -278px;
+}
+
+
+.prices-table{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.month-price-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.month-price-container > h3{
+  font-weight: 800;
+  font-size: 24px;
 }
 
 .room-info-block{
@@ -366,7 +444,7 @@ button:active {
   transition: all .2s ease;
 }
 
-.active, .counter-dot:hover{
+.counter-dot.active, .counter-dot:hover{
   width: 9px;
   height: 9px;
 }
@@ -390,13 +468,15 @@ button:active {
 .room-txt-container{
   display: flex;
   flex-direction: column;
-  gap: 30px
+  gap: 30px;
+  width: 27%;
 }
 
 .room-descript-container{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .order-button-container{

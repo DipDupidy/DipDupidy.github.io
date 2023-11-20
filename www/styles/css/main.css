@@ -13,7 +13,7 @@
   font-family: "NT Somic";
   src: url("www/fonts/NT_Somic/NTSomic-Regular.ttf");
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: NT Somic;
   line-height: 120%;
   color: #353535;
@@ -34,8 +34,12 @@ h3 {
 }
 
 h4 {
-  font-family: NT Somic;
   font-size: 16px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 24px;
   font-weight: 400;
 }
 
@@ -60,6 +64,34 @@ body, html {
   max-width: 1440px;
   width: 100%;
   margin: auto;
+}
+
+button {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 15px 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  border-radius: 17px;
+  border: none;
+  background: #46BF76;
+  color: #F9F9F9;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button:hover {
+  transition: box-shadow 0.2s ease;
+  box-shadow: inset 0px -5px 7px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transition: none;
+  box-shadow: inset 0px 5px 7px rgba(0, 0, 0, 0.15);
 }
 
 .navi-container {
@@ -246,6 +278,20 @@ footer {
   gap: 15px;
 }
 
+.rooms-buttons-chain {
+  display: flex;
+  gap: 30px;
+}
+
+.rooms-dot {
+  background-color: #73CD97;
+  transition: background-color 0.2s ease;
+}
+
+.rooms-dot.active {
+  background-color: #46BF76;
+}
+
 .rooms-container {
   width: 100%;
   display: flex;
@@ -256,31 +302,61 @@ footer {
   gap: 30px;
 }
 
-button {
-  display: inline-flex;
-  padding: 15px 20px;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.prices-table-cotainer {
+  z-index: 1001;
+  display: none;
+  position: fixed;
   justify-content: center;
   align-items: center;
-  border-radius: 17px;
-  border: none;
-  background: #46BF76;
-  color: #F9F9F9;
-  font-size: 16px;
-  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
 }
 
-button:hover {
-  transition: box-shadow 0.2s ease;
-  box-shadow: inset 0px -5px 7px rgba(0, 0, 0, 0.15);
+.prices-table-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color: #F9F9F9;
+  border-radius: 30px 18px 30px 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  padding: 0 60px 55px 60px;
 }
 
-button:active {
-  transition: none;
-  box-shadow: inset 0px 5px 7px rgba(0, 0, 0, 0.15);
+.exit-button {
+  display: flex;
+  padding: 11px 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: -278px;
+}
+
+.prices-table {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.month-price-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.month-price-container > h3 {
+  font-weight: 800;
+  font-size: 24px;
 }
 
 .room-info-block {
@@ -362,7 +438,7 @@ button:active {
   transition: all 0.2s ease;
 }
 
-.active, .counter-dot:hover {
+.counter-dot.active, .counter-dot:hover {
   width: 9px;
   height: 9px;
 }
@@ -385,12 +461,14 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 27%;
 }
 
 .room-descript-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .order-button-container {
