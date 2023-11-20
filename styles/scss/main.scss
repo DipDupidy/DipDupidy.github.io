@@ -1,0 +1,512 @@
+//Colors settings
+$white: #F9F9F9;
+$accent-color: #46BF76;
+$dark-color: #353535;
+$grey-color: #A9A9A9;
+$disabled-accent-color: #73CD97;
+$shadow: 0px 0px 5px 0px rgba(0, 0, 0, .25);
+$border-radius-h1: 60px;
+$border-radius-h2: 30px;
+$border-radius-buttons: 17px;
+$blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+
+//Fonts settings
+@font-face {
+  font-weight: 800;
+  font-family: "NT Somic";
+  src: url("www/fonts/NT_Somic/NTSomic-Bold.ttf");
+}
+@font-face {
+  font-weight: 600;
+  font-family: "NT Somic";
+  src: url("www/fonts/NT_Somic/NTSomic-Medium.ttf");
+}
+@font-face {
+  font-weight: 400;
+  font-family: "NT Somic";
+  src: url("www/fonts/NT_Somic/NTSomic-Regular.ttf");
+}
+
+$main-font: NT Somic;
+
+h1,h2,h3,h4,h5 {
+  font-family: $main-font;
+  line-height: 120%;
+  color: $dark-color;
+}
+
+h1,h2{
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 47px;
+}
+
+h3{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+h4{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h5{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: $dark-color;
+  font-family: $main-font;
+  line-height: 120%;
+}
+
+//General settings
+*, *::before, *::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, html{
+  background-color: $white;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 15px 20px;
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-buttons;
+  border: none;
+  background: $accent-color;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button:hover {
+  transition: box-shadow .2s ease;
+  box-shadow: inset 0px -5px 7px rgba(0, 0, 0, .15);
+}
+
+button:active {
+  transition: none;
+  box-shadow: inset 0px 5px 7px rgba(0, 0, 0, .15);
+}
+
+//Navigation bar styles
+.navi-container {
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  max-width: 1440px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 35px;
+  white-space: nowrap;
+  gap: 30px;
+}
+
+.navi{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 60px;
+  height: fit-content;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background: $white;
+  box-shadow: $shadow;
+}
+
+.navi > a:hover > h4{
+  color: $accent-color;
+}
+
+#order-btn{
+  display: inline-flex;
+  padding: 19px;
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-buttons;
+  border: none;
+  font-family: $main-font;
+  background: $accent-color;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+//Footer styles
+footer{
+  background-color: $accent-color;
+  display: flex;
+  width: 100%;
+  height: 160px;
+  justify-content: center;
+  align-items: end;
+  padding: 30px 0;
+}
+
+.footer-inner{
+  max-width: 2573px;
+  width: 100%;
+  margin: 0px 14%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contacts-container > h3{
+  text-align: right;
+  color: $white;
+  @media screen and (max-width: 1120px){
+    display: none;
+  }
+}
+
+.copyright-container > h3{
+  color: $white;
+  text-wrap: nowrap;
+}
+
+.socmed-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.socmed-container > img{
+  cursor: pointer;
+}
+
+//First block styles
+.logo-container{
+  display: flex;
+  padding-top: 235px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  margin-bottom: 120px;
+}
+
+#logo-img {
+  width: 17vw;
+}
+
+#hotel-word{
+  width: 17vw;
+}
+
+#white-lotus-word{
+  width: 56vw;
+}
+
+#motto-word{
+  width: 37vw;
+}
+
+//About us block styles
+.about-us-container{
+  width: 100%;
+  display: flex;
+  margin-top: 240px;
+  margin-bottom: 120px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.features-table{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+}
+
+.feature {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 302px;
+  width: 31%;
+  min-height: 255px;
+  max-height: 260px;
+  height: 100%;
+  gap: 20px;
+  border-radius: $border-radius-h2;
+  background: $white;
+  box-shadow: $shadow;
+}
+
+.feature > img{
+  height: 60px;
+}
+
+.txt-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  gap: 5px;
+}
+
+.txt-container > h3{
+  max-width: 400px;
+}
+
+.txt-container > a{
+  text-decoration: underline;
+  font-size: 18px;
+  color: $grey-color;
+}
+
+.txt-container > a:hover{
+  color: $accent-color;
+}
+
+.main-txt-container{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.paragraph-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  word-wrap: normal;
+}
+
+//Rooms block styles
+.rooms-buttons-chain{
+  display: flex;
+  gap: 30px;
+}
+
+.rooms-dot {
+  background-color: $disabled-accent-color;
+  transition: background-color .2s ease;
+}
+
+.rooms-dot.active {
+  background-color: $accent-color;
+}
+
+.rooms-container{
+  width: 100%;
+  display: flex;
+  padding-top: 120px;
+  margin-bottom: 120px;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.prices-table-cotainer{
+  z-index: 1001;
+  display: none; //flex
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .15);
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+
+.prices-table-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color: $white;
+  border-radius: 30px 18px 30px 30px;
+  box-shadow: $blocks-shadow;
+  width: 600px;
+  padding: 0 60px 55px 60px;
+}
+
+.exit-button{
+  display: flex;
+  padding: 11px 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: -278px;
+}
+
+
+.prices-table{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.month-price-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.month-price-container > h3{
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.room-info-block{
+  width: 100%;
+}
+
+.room-info-container{
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  border-radius: $border-radius-h1;
+  box-shadow: $blocks-shadow;
+}
+
+.slider-container{
+  position: relative;
+  width: 70%;
+}
+
+.slider-container > img{
+  width: 100%;
+  border-radius: $border-radius-h2;
+}
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background-color: $accent-color;
+  border-radius: 17px;
+  display: block;
+  justify-content: center;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.next{
+  right: 0;
+  margin-right: 10px;
+  padding: 12px 16px 12px 14px;
+}
+
+.prev{
+  margin-left: 10px;
+  padding: 12px 16px 12px 14px;
+}
+
+.counter-container{
+  position: absolute;
+  height: fit-content;
+  width: max-content;
+  background-color: rgba(255, 255, 255, .35);
+  backdrop-filter: blur(65px);
+  border-radius: 12px;
+  padding: 7px 18px;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -45px;
+  right: 50%;
+}
+
+.counter-dot{
+  cursor: pointer;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: $white;
+  display: block;
+  float: left;
+  margin: 0px 2px;
+  transition: all .2s ease;
+}
+
+.counter-dot.active, .counter-dot:hover{
+  width: 9px;
+  height: 9px;
+}
+
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-delay: 0s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade{
+  from{opacity: .4;}
+  to{opacity: 1;}
+}
+@keyframes fade{
+  from{opacity: .4;}
+  to{opacity: 1;}
+}
+
+.room-txt-container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 27%;
+}
+
+.room-descript-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.order-button-container{
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  gap: 15px
+}
+
+//Reviews block styles
+.reviews-list{
+  display: flex;
+  min-width: 800px;
+  min-height: 180px;
+  box-shadow: $blocks-shadow;
+  border-radius: $border-radius-h2;
+}
