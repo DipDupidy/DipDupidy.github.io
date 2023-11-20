@@ -31,20 +31,32 @@ function showRoom(m){
 }
 
 function plusSlides(roomId, leap){
+    let slidesBase = [];
     for(i=0;i<slides.length;i++){
         if (slides[i].id=="slide-index-"+roomId){
-            if (slides[i].style.display == "block"){
-                slides[i].style.display = "none";
-                slides[i+leap].style.display = "block";
-                return;
-            }
+            slidesBase[i] = slides[i];
         }
-        if (i+leap>=slides.length){
-            slides[0].style.display = "block";
-            slides[i].style.display = "none";
+    };
+
+    let filteredSlidesBase = slidesBase.filter(Object);
+    
+    for (i=0;i<filteredSlidesBase.length;i++){
+        if (filteredSlidesBase[i].style.display == "block" & i+leap>=filteredSlidesBase.length){
+            filteredSlidesBase[0].style.display = "block";
+            filteredSlidesBase[i].style.display = "none";
+            return;
+        };
+        if (filteredSlidesBase[i].style.display == "block" & i==0 & i+leap<0){
+            filteredSlidesBase[filteredSlidesBase.length-1].style.display = "block";
+            filteredSlidesBase[i].style.display = "none";
+            return;
+        };
+        if (filteredSlidesBase[i].style.display == "block"){
+            filteredSlidesBase[i].style.display = "none";
+            filteredSlidesBase[i+leap].style.display = "block";
             return;
         }
-    }
+    };
 }
 
 function currentSlide(r_index, s_index){
