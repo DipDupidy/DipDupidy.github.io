@@ -11,11 +11,11 @@
     <div class="navi-container">
       <header class="navi">
         <a class="navi-link" href="#"><h4>contact@whitelotus.ru</h4></a>
-        <a class="navi-link" href="index.html"><h4>О НАС</h4></a>
+        <a class="navi-link" href="index.html"><h4 style="font-weight: 800; color: #46BF76;">О НАС</h4></a>
         <a class="navi-link" href="rooms.html"><h4>НОМЕРА</h4></a>
-        <a class="navi-link" href="#"><h4>ОТЗЫВЫ</h4></a>
-        <a class="navi-link" href="#"><h4>ГАЛЕРЕЯ</h4></a>
-        <a class="navi-link" href="#"><h4>КОНТАКТЫ</h4></a>
+        <a class="navi-link" href="reviews.html"><h4>ОТЗЫВЫ</h4></a>
+        <a class="navi-link" href="galery.html"><h4>ГАЛЕРЕЯ</h4></a>
+        <a class="navi-link" href="contacts.html"><h4>КОНТАКТЫ</h4></a>
         <a class="navi-link" href="#"><h4>+7 (982) 220-10-10</h4></a>
       </header>
       <button id="order-btn">Забронировать</button>
@@ -33,13 +33,27 @@
 
     <div class="about-us-container">
       <h1>О нас</h1>
+      <div class="password-cotainer fade" id="password-cotainer">
+        <div class="password-block">
+          <button class="exit-button" id="password-exit-button" onclick="closePasswordOverlay('password-cotainer')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
+          <h1>Wi-Fi</h1>
+          <div class="contacts-txt-container">
+            <h2>Имя сети:</h2>
+            <h3>Whitelotus</h3>
+          </div>
+          <div class="contacts-txt-container">
+            <h2>Пароль:</h2>
+            <h3>12345678</h3>
+          </div>
+          </div>
+        </div>
       <div class="features-table">
         <div class="feature" id="dislocation-feature">
           <img src="img/features/map-point.png" alt="map-point">
           <div class="txt-container">
             <h2>Удобное расположение</h2>
             <h3>От отеля до песчаного пляжа всего 250 метров</h3>
-            <a href="#">Карта</a>
+            <a href="contacts.html">Карта</a>
           </div>
         </div>
 
@@ -53,39 +67,39 @@
         </div>
 
         <div class="feature" id="kitchen-feature">
-          <img src="img/features/kitchen.png" alt="kitchen">
+          <img src="img/features/kitchen.png">
           <div class="txt-container">
             <h2>Оснащенная кухня</h2>
             <h3>На общей кухне есть все необходимое для готовки оборудование</h3>
-            <a href="#">Смотреть</a>
+            <a href="galery.html">Смотреть</a>
           </div>
         </div>
 
         <div class="feature" id="wi-fi-feature">
-          <img src="img/features/wi-fi.png" alt="wi-fi">
+          <img src="img/features/wi-fi.png">
           <div class="txt-container">
             <h2>Бесплатный Wi-Fi</h2>
             <h3>Wi-Fi доступен на всей
               территории отеля</h3>
-            <a href="#">Пароль</a>
+            <a onclick="showPasswordOverlay('password-cotainer')" style="cursor: pointer;">Пароль</a>
           </div>
         </div>
 
         <div class="feature" id="terrace-feature">
-          <img src="img/features/terrace.png" alt="terrace">
+          <img src="img/features/terrace.png">
           <div class="txt-container">
             <h2>Уютная терраса</h2>
             <h3>Открытая терраса с удобными диванами и прочей уличной мебелью</h3>
-            <a href="#">Смотреть</a>
+            <a href="galery.html">Смотреть</a>
           </div>
         </div>
 
         <div class="feature" id="parking-feature">
-          <img src="img/features/parking.png" alt="parking">
+          <img src="img/features/parking.png">
           <div class="txt-container">
             <h2>Автостоянка рядом</h2>
             <h3>Места парковки на территории отеля</h3>
-            <a href="#">Карта</a>
+            <a href="contacts.html">Карта</a>
           </div>
         </div>
       </div>
@@ -105,6 +119,7 @@
       </div> 
     </div>
   </div>
+  <script src="scripts/password-overlay.js"></script>
   <script src="scripts/prices_overlay.js"></script>
   <script src="scripts\room_slider.js"></script>
   <footer class="footer">
@@ -118,7 +133,7 @@
         <img src="img/icons/social-medias/insta_icon.svg" alt="inst">
         <img src="img/icons/social-medias/fb_icon.svg" alt="facebook">
       </div>
-      <div class="contacts-container">
+      <div class="footer-contacts-container">
         <h3>+7 (982) 220-10-10</h3>
         <h3>whitelotushotel@yandex.ru</h3>
         <h3>Краснодарский край, Кучугуры, ул. Благополучия 13</h3>
