@@ -776,4 +776,10 @@ footer {
   .counter-container {
     padding: 5px 12px;
   }
+}
+@media screen and (min-height: 1196px) {
+  #contacts-footer {
+    position: absolute;
+    bottom: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
