@@ -1,9 +1,10 @@
-//Colors settings
+//Colors variables
 $white: #F9F9F9;
 $accent-color: #46BF76;
 $dark-color: #353535;
 $grey-color: #A9A9A9;
 $disabled-accent-color: #73CD97;
+//Shadows & borders variables
 $shadow: 0px 0px 5px 0px rgba(0, 0, 0, .25);
 $border-radius-h1: 60px;
 $border-radius-h2: 30px;
@@ -40,17 +41,21 @@ h1,h2{
 }
 
 h1 {
-  font-size: 47px;
+  font-size: 2.935rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 h3{
-  font-size: 16px;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 150%;
 }
 
 h4{
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -109,6 +114,23 @@ button:active {
   box-shadow: inset 0px 5px 7px rgba(0, 0, 0, .15);
 }
 
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  animation-name: fade;
+  animation-duration: .5s;
+}
+
+@-webkit-keyframes fade{
+  from{opacity: .6;}
+  to{opacity: 1;}
+}
+@keyframes fade{
+  from{opacity: .6;}
+  to{opacity: 1;}
+}
+
 //Navigation bar styles
 .navi-container {
   z-index: 1000;
@@ -124,8 +146,8 @@ button:active {
 
 .navi{
   display: flex;
-  flex-wrap: wrap;
-  padding: 20px 60px;
+  flex-wrap: nowrap;
+  padding: 15px 60px;
   height: fit-content;
   width: 100%;
   justify-content: space-between;
@@ -141,7 +163,6 @@ button:active {
 
 #order-btn{
   display: inline-flex;
-  padding: 19px;
   height: fit-content;
   width: fit-content;
   justify-content: center;
@@ -151,7 +172,6 @@ button:active {
   font-family: $main-font;
   background: $accent-color;
   color: $white;
-  font-size: 16px;
   font-weight: 600;
 }
 
@@ -167,12 +187,13 @@ footer{
 }
 
 .footer-inner{
-  max-width: 2573px;
+  max-width: 1440px;
   width: 100%;
   margin: 0px 14%;
   display: flex;
   justify-content: space-between;
   align-items: end;
+  flex-wrap: nowrap;
 }
 
 .footer-contacts-container > h3{
@@ -241,6 +262,7 @@ footer{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 30px;
   row-gap: 30px;
 }
 
@@ -251,11 +273,9 @@ footer{
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-width: 302px;
-  width: 31%;
-  min-height: 255px;
-  max-height: 260px;
-  height: 100%;
+  max-width: 460px;
+  width: 100%;
+  height: 260px;
   gap: 20px;
   border-radius: $border-radius-h2;
   background: $white;
@@ -426,7 +446,7 @@ footer{
 .next{
   right: 0;
   margin-right: 10px;
-  padding: 12px 16px 12px 14px;
+  padding: 12px 14px 12px 16px;
 }
 
 .prev{
@@ -465,27 +485,12 @@ footer{
   height: 9px;
 }
 
-.fade{
-  -webkit-animation-name: fade;
-  -webkit-animation-delay: 0s;
-  animation-name: fade;
-  animation-duration: 1s;
-}
-
-@-webkit-keyframes fade{
-  from{opacity: .4;}
-  to{opacity: 1;}
-}
-@keyframes fade{
-  from{opacity: .4;}
-  to{opacity: 1;}
-}
-
 .room-txt-container{
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 27%;
+  width: 25%;
+  text-wrap: wrap;
 }
 
 .room-descript-container{
@@ -536,12 +541,10 @@ footer{
 
 .review-card{
   display: flex;
-  min-width: 800px;
-  min-height: 180px;
   box-shadow: $blocks-shadow;
   border-radius: $border-radius-h2;
   padding: 30px;
-  gap: 10px;
+  gap: 30px;
   flex-direction: row;
 }
 
@@ -556,7 +559,6 @@ footer{
 //Galery block styles
 .galery-container{
   width: 100%;
-  //height: calc(100vh - 280px);
   display: flex;
   padding-top: 240px;
   margin-bottom: 120px;
@@ -576,11 +578,12 @@ footer{
   max-width: 1001px;
   justify-content: center;
   align-items: center;
-  gap: 45px;
+  gap: 30px;
 }
 
 .galery-block > img {
   border-radius: $border-radius-h1;
+  width: 100%;
 }
 
 #galery-counter {
@@ -617,6 +620,7 @@ footer{
 
 .contacts-block{
   display: flex;
+  margin-top: 120px;
   justify-content: center;
   align-items: start;
   gap: 45px;
@@ -672,4 +676,115 @@ footer{
 
 #password-exit-button{
   right: -95px;
+}
+
+//Adaptive
+@media screen and (max-width: 1800px){
+  .container {
+    max-width: 1200px;
+  }
+  .footer-inner{
+    max-width: 1200px;
+  }
+  .navi-container{
+    max-width: 1200px;
+  }
+  .copyright-container > h3, .footer-contacts-container > h3{
+    max-width: 260px;
+    text-wrap: wrap;
+  }
+  .feature {
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .container {
+    max-width: 900px;
+  }
+  .footer-inner{
+    max-width: 900px;
+  }
+  .navi-container{
+    max-width: 900px;
+  }
+  .navi{
+    border-radius: 15px;
+    padding: 15px 45px;
+  }
+  #order-btn{
+    right: 0;
+  }
+  .feature {
+    max-width: 275px;
+    height: 225px;
+  }
+  .feature > img{
+    height: 45px;
+  }
+  h1{
+    font-size: 2.1875rem;
+  }
+  h2{
+    font-size: 1.25rem;
+  }
+  h3{
+    font-size: 0.75rem;
+  }
+  h4{
+    font-size: 0.75rem;
+  }
+  button{
+    font-size: 0.75rem;
+  }
+  .socmed-container > img{
+    width: 35px;
+  }
+  .txt-container > a{
+    font-size: 0.75rem;
+  }
+  .prev, .next{
+    width: 34px;
+    height: 34px;
+    border-radius: 12.5px;
+  }
+  .next{
+    padding: 9px 10.5px 9px 12px;
+  }
+  .prev{
+    padding: 9px 12px 9px 10.5px;
+  }
+  .prev > img, .next > img{
+    height: 16px;
+  }
+  .room-info-container{
+    border-radius: 45px;
+    padding: 22.5px;
+  }
+  .room-info-container > img{
+    border-radius: 22.5px;
+  }
+  button{
+    border-radius: 15px;
+  }
+  .rewiev-inner-container{
+    width: fit-content;
+  }
+  .review-card > img{
+    width: 115px;
+  }
+  .galery-block{
+    gap: 20px;
+  }
+  .counter-dot{
+    width: 5px;
+    height: 5px;
+  }
+  .counter-dot.active{
+    width: 7px;
+    height: 7px;
+  }
+  .counter-container{
+    padding: 5px 12px;
+  }
 }
