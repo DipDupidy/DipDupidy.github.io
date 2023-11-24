@@ -19,20 +19,20 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 @font-face {
   font-weight: 800;
   font-family: "NT Somic";
-  src: url("www/fonts/NT_Somic/NTSomic-Bold.ttf");
+  src: url("www/fonts/NT_Somic/NTSomic-Bold.woff2") format("web");
 }
 @font-face {
   font-weight: 600;
   font-family: "NT Somic";
-  src: url("www/fonts/NT_Somic/NTSomic-Medium.ttf");
+  src: url("www/fonts/NT_Somic/NTSomic-Medium.woff2") format("web");
 }
 @font-face {
   font-weight: 400;
   font-family: "NT Somic";
-  src: url("www/fonts/NT_Somic/NTSomic-Regular.ttf");
+  src: url("www/fonts/NT_Somic/NTSomic-Regular.woff2") format("web");
 }
 
-$main-font: NT Somic;
+$main-font: 'NT Somic';
 
 h1,h2,h3,h4,h5 {
   font-family: $main-font;

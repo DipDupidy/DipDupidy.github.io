@@ -4,20 +4,20 @@
 @font-face {
   font-weight: 800;
   font-family: "NT Somic";
-  src: url("www/fonts/NT_Somic/NTSomic-Bold.ttf");
+  src: url("www/fonts/NT_Somic/NTSomic-Bold.woff2") format("web");
 }
 @font-face {
   font-weight: 600;
   font-family: "NT Somic";
-  src: url("www/fonts/NT_Somic/NTSomic-Medium.ttf");
+  src: url("www/fonts/NT_Somic/NTSomic-Medium.woff2") format("web");
 }
 @font-face {
   font-weight: 400;
   font-family: "NT Somic";
-  src: url("www/fonts/NT_Somic/NTSomic-Regular.ttf");
+  src: url("www/fonts/NT_Somic/NTSomic-Regular.woff2") format("web");
 }
 h1, h2, h3, h4, h5 {
-  font-family: NT Somic;
+  font-family: "NT Somic";
   line-height: 120%;
   color: #353535;
 }
@@ -53,7 +53,7 @@ h5 {
 a {
   text-decoration: none;
   color: #353535;
-  font-family: NT Somic;
+  font-family: "NT Somic";
   line-height: 120%;
 }
 
@@ -241,7 +241,7 @@ button:active {
   align-items: center;
   border-radius: 17px;
   border: none;
-  font-family: NT Somic;
+  font-family: "NT Somic";
   background: #46BF76;
   color: #F9F9F9;
   padding: 0 19px;
