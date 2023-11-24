@@ -16,6 +16,12 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 
 
 /*---------------------------- FONTS settings ----------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;500;700&display=swap');
+
+
+
 @font-face {
   font-weight: 800;
   font-family: 'NT Somic';
@@ -39,7 +45,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   url("fonts/NT_Somic/NTSomic-Regular.ttf") format("ttf");
 }
 
-$main-font: "NT Somic";
+$main-font: 'Inter Tight', sans-serif; //NT Somic
 
 h1,h2,h3,h4,h5 {
   font-family: $main-font;
@@ -89,7 +95,6 @@ a{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: NT Somic;
 }
 
 body, html{
