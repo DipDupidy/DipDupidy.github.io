@@ -1,3 +1,6 @@
+/*---------------------------- COLORS variables ---------------------------*/
+/*---------------------- SHADOWS & BORDERS variables ----------------------*/
+/*---------------------------- FONTS settings ----------------------------*/
 @font-face {
   font-weight: 800;
   font-family: "NT Somic";
@@ -24,7 +27,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.935rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -43,7 +46,7 @@ h4 {
 }
 
 h5 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -54,6 +57,7 @@ a {
   line-height: 120%;
 }
 
+/*---------------------------- GENERAL settings ----------------------------*/
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
@@ -61,43 +65,47 @@ a {
 }
 
 body, html {
+  position: relative;
   background-color: #F9F9F9;
 }
 
 .container {
-  max-width: 1440px;
   width: 100%;
   margin: auto;
 }
 
+/*---------------------------- BUTTONS GENERAL settings ----------------------------*/
 button {
+  /*----Self----*/
   cursor: pointer;
   display: inline-flex;
-  padding: 15px 20px;
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  padding: 15px 20px;
+  background: #46BF76;
+  border: none;
+  border-radius: 17px;
+  /*----Content----*/
   justify-content: center;
   align-items: center;
-  border-radius: 17px;
-  border: none;
-  background: #46BF76;
   color: #F9F9F9;
   font-size: 16px;
   font-weight: 600;
 }
 
 button:hover {
-  transition: box-shadow 0.2s ease;
   box-shadow: inset 0px -5px 7px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease;
 }
 
 button:active {
-  transition: none;
   box-shadow: inset 0px 5px 7px rgba(0, 0, 0, 0.15);
+  transition: none;
 }
 
+/*---------------------------- FADE ANIMATION settings ----------------------------*/
 .fade {
   -webkit-animation-name: fade;
   animation-delay: 0s;
@@ -112,40 +120,121 @@ button:active {
     opacity: 1;
   }
 }
-.navi-container {
-  z-index: 1000;
-  display: flex;
+/*---------------------------- MOBILE NAVIGATION settings ----------------------------*/
+.mobile-navi-container {
+  /*----Position---*/
+  z-index: 1200;
   position: fixed;
+  top: 0;
+  /*----Self---*/
+  display: none;
   max-width: 1440px;
   width: 100%;
-  justify-content: space-between;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgba(70, 191, 118, 0);
+  margin: auto;
+  transition: 0.65s;
+}
+
+#mobile-navi-block {
   margin-top: 35px;
+}
+
+/*---- BURGER BUTTON ---*/
+#burger-button {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  background-color: #46BF76;
+  border-radius: 17px;
+  float: right;
+  clear: right;
+}
+
+#burger-item-top, #burger-item-center, #burger-item-down {
+  position: absolute;
+  transition: 0.65s;
+}
+
+#burger-item-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#burger-item-top {
+  top: 13px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#burger-item-down {
+  top: 33px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#burger-order-btn {
+  height: 46px;
+  display: block;
+  transition: 0.65s;
+}
+
+/*---- MOBILE NAVIGATION LIST ---*/
+#mobile-navi-list {
+  display: none;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#mobile-navi-list > a {
+  transition: 0.65s;
+}
+
+/*---------------------------- DESKTOP NAVIGATION settings ----------------------------*/
+.navi-container {
+  /*----Position---*/
+  z-index: 1000;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  /*----Self---*/
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  margin-top: 35px;
+  /*----Content---*/
+  justify-content: space-between;
   white-space: nowrap;
   gap: 30px;
 }
 
-.navi {
+.navi-block {
+  /*----Self---*/
   display: flex;
-  flex-wrap: nowrap;
-  padding: 20px 60px;
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  width: 100%;
+  padding: 20px 60px;
+  border-radius: 20px;
+  background-color: #F9F9F9;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  /*----Content---*/
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
-  background: #F9F9F9;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  flex-wrap: nowrap;
 }
 
-.navi > a:hover > h4 {
+.navi-block > a:hover > h4 {
   color: #46BF76;
 }
 
+/*---- ORDER BUTTON ---*/
 #order-btn {
   display: inline-flex;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 59px;
   width: -moz-fit-content;
   width: fit-content;
   justify-content: center;
@@ -155,38 +244,49 @@ button:active {
   font-family: NT Somic;
   background: #46BF76;
   color: #F9F9F9;
-  padding: 19px;
+  padding: 0 19px;
   font-weight: 600;
 }
 
+/*---------------------------- FOOTER settings ----------------------------*/
 footer {
-  background-color: #46BF76;
+  position: absolute;
+  /*----Self---*/
   display: flex;
   width: 100%;
-  height: 160px;
+  padding: 30px 0;
+  background-color: #46BF76;
+  /*----Content---*/
   justify-content: center;
   align-items: end;
-  padding: 30px 0;
+  flex-wrap: nowrap;
 }
 
 .footer-inner {
+  /*----Self---*/
+  display: flex;
   max-width: 1440px;
   width: 100%;
-  margin: 0px 14%;
-  display: flex;
+  /*----Content---*/
   justify-content: space-between;
   align-items: end;
   flex-wrap: nowrap;
+}
+
+/*---- FOOTER CONTENT ---*/
+.footer-contacts-container {
+  max-width: 338px;
+  width: 100%;
 }
 
 .footer-contacts-container > h3 {
   text-align: right;
   color: #F9F9F9;
 }
-@media screen and (max-width: 1120px) {
-  .footer-contacts-container > h3 {
-    display: none;
-  }
+
+.copyright-container {
+  max-width: 338px;
+  width: 100%;
 }
 
 .copyright-container > h3 {
@@ -205,15 +305,19 @@ footer {
   cursor: pointer;
 }
 
+/*---------------------------- GREETINGS block settings ----------------------------*/
 .logo-container {
+  /*----Self---*/
   display: flex;
-  padding-top: 235px;
+  height: 100vh;
+  /*----Content---*/
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1vw;
-  margin-bottom: 120px;
 }
 
+/*---- GREETINGS CONTENT ---*/
 #logo-img {
   width: 17vw;
 }
@@ -230,57 +334,70 @@ footer {
   width: 37vw;
 }
 
+/*---------------------------- ABOUT US block settings ----------------------------*/
 .about-us-container {
-  width: 100%;
+  /*----Self---*/
   display: flex;
-  margin-top: 240px;
-  margin-bottom: 120px;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 87vh;
+  padding: 120px 0;
+  margin: auto;
+  /*----Content---*/
   align-items: center;
   flex-direction: column;
+  gap: 30px;
 }
 
 .features-table {
-  margin-top: 60px;
+  /*----Self---*/
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  /*----Content---*/
   gap: 30px;
-  row-gap: 30px;
+  flex-wrap: wrap;
 }
 
 .feature {
+  /*----Self---*/
   display: flex;
-  padding: 30px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  max-width: 460px;
-  width: 100%;
   height: 260px;
-  gap: 20px;
+  min-width: 338px;
+  max-width: 705px;
+  width: 100%;
+  padding: 30px;
   border-radius: 30px;
   background: #F9F9F9;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  /*----Content---*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
 }
 
 .feature > img {
-  height: 60px;
+  height: 35%;
 }
 
 .txt-container {
+  /*----Self---*/
   display: flex;
+  /*----Content---*/
   flex-direction: column;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  align-items: center;
+  align-self: stretch;
   gap: 5px;
 }
 
+.txt-container > h2 {
+  align-self: stretch;
+  text-align: center;
+}
+
 .txt-container > h3 {
-  max-width: 400px;
+  align-self: stretch;
+  text-align: center;
 }
 
 .txt-container > a {
@@ -294,22 +411,41 @@ footer {
 }
 
 .main-txt-container {
-  margin-top: 60px;
+  /*----Self---*/
   display: flex;
-  flex-direction: column;
+  /*----Content---*/
   gap: 30px;
+  flex-direction: column;
 }
 
 .paragraph-container {
+  /*----Self---*/
   display: flex;
+  /*----Content---*/
   flex-direction: column;
   gap: 15px;
   word-wrap: normal;
 }
 
+/*---------------------------- ROOMS block settings ----------------------------*/
+/*---- ROOMS NAVIGATION BUTTNOS ---*/
 .rooms-buttons-chain {
   display: flex;
   gap: 30px;
+}
+
+.rooms-button-chain-shadow {
+  /*----Position---*/
+  position: absolute;
+  top: 205px;
+  left: 29px;
+  /*----Self---*/
+  display: none;
+  max-width: 557px;
+  width: 100%;
+  height: 50px;
+  box-shadow: 45px 0px 25px -15px #F9F9F9 inset, -45px 0px 25px -15px #F9F9F9 inset;
+  pointer-events: none;
 }
 
 .rooms-dot {
@@ -321,55 +457,56 @@ footer {
   background-color: #46BF76;
 }
 
-.rooms-container {
-  width: 100%;
-  display: flex;
-  padding-top: 120px;
-  margin-bottom: 120px;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.prices-table-cotainer {
+/*-------------- PRICES --------------*/
+.prices-table-container {
+  /*----Position---*/
   z-index: 1001;
-  display: none;
   position: fixed;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  /*----Self---*/
+  display: none;
+  width: 100vw;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.15);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  width: 100vw;
-  height: 100vh;
-  top: 0;
+  /*----Content---*/
+  justify-content: center;
+  align-items: center;
 }
 
 .prices-table-block {
+  /*----Self---*/
   display: flex;
+  width: 600px;
+  padding: 0 60px 55px 60px;
+  border-radius: 30px 18px 30px 30px;
+  background-color: #F9F9F9;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  /*----Content---*/
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 25px;
-  background-color: #F9F9F9;
-  border-radius: 30px 18px 30px 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  width: 600px;
-  padding: 0 60px 55px 60px;
 }
 
 .exit-button {
-  display: flex;
-  padding: 11px 10px;
-  justify-content: center;
-  align-items: center;
+  /*----Position---*/
   position: relative;
   right: -278px;
+  /*----Self---*/
+  display: flex;
+  padding: 11px 10px;
+  /*----Content---*/
+  justify-content: center;
+  align-items: center;
 }
 
 .prices-table {
+  /*----Self---*/
   display: flex;
   width: 100%;
+  /*----Content---*/
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -377,8 +514,11 @@ footer {
 }
 
 .month-price-container {
+  /*----Self---*/
   display: flex;
   width: 100%;
+  min-height: 100vh;
+  /*----Content---*/
   justify-content: space-between;
   align-items: center;
 }
@@ -388,25 +528,41 @@ footer {
   font-size: 24px;
 }
 
-.room-info-block {
+/*---- ROOM BLOCK ---*/
+.rooms-container {
+  /*----Self---*/
+  display: flex;
+  max-width: 1440px;
   width: 100%;
+  min-height: 87vh;
+  padding: 120px 0;
+  margin: 0 auto 0 auto;
+  /*----Content---*/
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .room-info-container {
+  width: 100%;
+}
+
+.room-info-block {
+  /*----Self---*/
   display: flex;
-  flex-direction: row;
   padding: 30px;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 30px;
-  flex-wrap: wrap;
   border-radius: 60px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  /*----Content---*/
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .slider-container {
   position: relative;
-  width: 70%;
+  width: 72%;
 }
 
 .slider-container > img {
@@ -415,16 +571,17 @@ footer {
 }
 
 .prev, .next {
-  cursor: pointer;
+  /*----Position---*/
   position: absolute;
-  width: 46px;
-  height: 46px;
+  top: 50%;
+  /*----Self---*/
+  display: flex;
+  cursor: pointer;
+  margin-top: -25px;
   background-color: #46BF76;
   border-radius: 17px;
-  display: block;
+  /*----Content---*/
   justify-content: center;
-  top: 50%;
-  margin-top: -25px;
 }
 
 .next {
@@ -439,31 +596,34 @@ footer {
 }
 
 .counter-container {
+  /*----Position---*/
   position: absolute;
+  bottom: 15px;
+  left: 50%;
+  right: 50%;
+  /*----Self---*/
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-max-content;
   width: max-content;
+  padding: 7px 18px;
+  margin-left: -45px;
   background-color: rgba(255, 255, 255, 0.35);
   -webkit-backdrop-filter: blur(65px);
           backdrop-filter: blur(65px);
   border-radius: 12px;
-  padding: 7px 18px;
-  bottom: 15px;
-  left: 50%;
-  margin-left: -45px;
-  right: 50%;
 }
 
 .counter-dot {
+  /*----Self---*/
+  display: block;
   cursor: pointer;
+  float: left;
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #F9F9F9;
-  display: block;
-  float: left;
   margin: 0px 2px;
+  background-color: #F9F9F9;
   transition: all 0.2s ease;
 }
 
@@ -474,17 +634,18 @@ footer {
 
 .room-txt-container {
   display: flex;
+  width: 23%;
   flex-direction: column;
-  gap: 30px;
-  width: 25%;
   text-wrap: wrap;
+  gap: 15px;
 }
 
 .room-descript-container {
   display: flex;
+  min-width: 263px;
+  width: 100%;
   flex-direction: column;
   gap: 10px;
-  width: 100%;
 }
 
 .order-button-container {
@@ -496,16 +657,19 @@ footer {
   gap: 15px;
 }
 
+/*---------------------------- REVIEWS block settings ----------------------------*/
 .reviews-container {
-  width: 100%;
-  height: calc(100vh - 280px);
+  /*----Self---*/
   display: flex;
-  padding-top: 120px;
-  margin-bottom: 120px;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 87vh;
+  margin: auto;
+  /*----Content---*/
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
 }
 
 .reviews-container > h1 {
@@ -514,11 +678,12 @@ footer {
 }
 
 .reviews-block {
+  /*----Self---*/
   display: flex;
-  max-width: 1001px;
+  /*----Content---*/
   justify-content: center;
   align-items: center;
-  gap: 45px;
+  gap: 30px;
 }
 
 #reviews-prev-btn, #reviews-next-btn {
@@ -527,27 +692,42 @@ footer {
 }
 
 .review-card {
+  /*----Self---*/
   display: flex;
+  padding: 30px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  padding: 30px;
-  gap: 30px;
+  /*----Content---*/
   flex-direction: row;
+  gap: 30px;
 }
 
 .rewiev-inner-container {
+  /*----Self---*/
   display: flex;
+  flex: 1 0 0;
+  /*----Content---*/
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  flex: 1 0 0;
 }
 
+.reviews-navigation-mobile-container {
+  display: none;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/*---------------------------- GALERY block settings ----------------------------*/
 .galery-container {
-  width: 100%;
+  /*----Self---*/
   display: flex;
-  padding-top: 240px;
-  margin-bottom: 120px;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 87vh;
+  /*----Content---*/
+  padding: 240px 0 120px 0;
+  margin: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -560,41 +740,49 @@ footer {
 }
 
 .galery-block {
+  /*----Self---*/
   display: flex;
-  max-width: 1001px;
-  justify-content: center;
+  max-width: 1200px;
+  /*----Content---*/
+  justify-content: space-between;
   align-items: center;
-  gap: 30px;
 }
 
 .galery-block > img {
+  width: 80%;
   border-radius: 60px;
-  width: 100%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 #galery-counter {
+  /*----Position---*/
   position: static;
+  bottom: 15px;
+  left: 50%;
+  right: 50%;
+  /*----Self---*/
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-max-content;
   width: max-content;
+  padding: 7px 18px;
+  margin-left: 0;
   background-color: rgba(0, 0, 0, 0.35);
   -webkit-backdrop-filter: blur(65px);
           backdrop-filter: blur(65px);
   border-radius: 12px;
-  padding: 7px 18px;
-  bottom: 15px;
-  left: 50%;
-  margin-left: 0;
-  right: 50%;
 }
 
+/*---------------------------- CONTACTS block settings ----------------------------*/
 .contacts-container {
-  width: 100%;
+  /*----Self---*/
   display: flex;
-  padding-top: 120px;
-  margin-bottom: 120px;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 87vh;
+  padding: 240px 0 120px 0;
+  margin: auto;
+  /*----Content---*/
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -605,181 +793,594 @@ footer {
   top: 120px;
 }
 
+.contacts-container > h1 {
+  position: absolute;
+  top: 120px;
+}
+
 .contacts-block {
+  /*----Self---*/
   display: flex;
-  margin-top: 120px;
+  width: 100%;
+  /*----Content---*/
   justify-content: center;
   align-items: start;
   gap: 45px;
 }
 
 .contacts-info-block {
+  /*----Self---*/
   display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 50px;
+  align-self: stretch;
+  max-width: 36%;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  /*----Content---*/
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
-  border-radius: 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   gap: 20px;
 }
 
 .contacts-txt-container {
+  /*----Self---*/
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3px;
   align-self: stretch;
   width: -moz-fit-content;
   width: fit-content;
+  /*----Content---*/
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
 }
 
+.contacts-txt-container > h3 {
+  text-wrap: wrap;
+}
+
+/*---------------------------- WIFI PASSWORD OVERLAY settings ----------------------------*/
 .password-cotainer {
+  /*----Position---*/
   z-index: 1001;
-  display: none;
   position: fixed;
+  top: 0;
+  /*----Self---*/
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  /*----Content---*/
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.15);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  width: 100vw;
-  height: 100vh;
-  top: 0;
 }
 
 .password-block {
+  /*----Self---*/
   display: flex;
+  width: 235px;
+  padding: 0 60px 55px 60px;
+  background-color: #F9F9F9;
+  border-radius: 30px 18px 30px 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  /*----Content---*/
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 25px;
-  background-color: #F9F9F9;
-  border-radius: 30px 18px 30px 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  width: 235px;
-  padding: 0 60px 55px 60px;
 }
 
 #password-exit-button {
   right: -95px;
 }
 
-@media screen and (max-width: 1800px) {
-  .container {
-    max-width: 1200px;
-  }
-  .footer-inner {
-    max-width: 1200px;
-  }
+/*-------------- DESKTOP --------------*/
+@media (max-width: 1720px) {
   .navi-container {
-    max-width: 1200px;
+    max-width: 1720px;
+    padding: 0 140px;
   }
-  .copyright-container > h3, .footer-contacts-container > h3 {
-    max-width: 260px;
-    text-wrap: wrap;
+  .about-us-container {
+    max-width: 1720px;
+    padding: 120px 140px;
   }
-  .feature {
-    max-width: 380px;
+  .rooms-container {
+    max-width: 1720px;
+    padding: 120px 140px;
+  }
+  .reviews-container {
+    max-width: 1720px;
+    padding: 120px 140px;
+  }
+  .galery-container {
+    max-width: 1720px;
+    padding: 240px 140px 120px 140px;
+  }
+  .contacts-container {
+    max-width: 1720px;
+    padding: 120px 140px 120px 140px;
   }
 }
-@media screen and (max-width: 1400px) {
-  .container {
-    max-width: 900px;
-  }
-  .footer-inner {
-    max-width: 900px;
-  }
-  .navi-container {
-    max-width: 900px;
-  }
-  .navi {
-    border-radius: 15px;
-    padding: 20px 45px;
-  }
-  #order-btn {
-    padding: 20px 20px;
-    right: 0;
-  }
-  .feature {
-    max-width: 275px;
-    height: 225px;
-  }
-  .feature > img {
-    height: 45px;
-  }
+/*-------------- LAPTOP L --------------*/
+@media (max-width: 1536px) {
   h1 {
-    font-size: 2.1875rem;
+    font-size: 2.25rem;
   }
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   h3 {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
   h4 {
     font-size: 0.75rem;
   }
+  h5 {
+    font-size: 1.125rem;
+  }
   button {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
-  .socmed-container > img {
-    width: 35px;
+  #order-btn {
+    height: 54px;
   }
-  .txt-container > a {
-    font-size: 0.75rem;
+  .rooms-container {
+    max-width: 1336px;
+    padding: 100px 140px;
   }
-  .prev, .next {
-    width: 34px;
-    height: 34px;
-    border-radius: 12.5px;
+  .galery-container {
+    max-width: 1100px;
+    padding: 180px 140px 120px 140px;
   }
-  .next {
-    padding: 9px 10.5px 9px 12px;
+  .galery-container > h1 {
+    top: 100px;
   }
-  .prev {
-    padding: 9px 12px 9px 10.5px;
+  .contacts-container {
+    max-width: 1361px;
+    padding: 180px 140px 120px 140px;
   }
-  .prev > img, .next > img {
-    height: 16px;
+  iframe {
+    max-height: 565px;
   }
-  .room-info-container {
+  .contacts-container > h1 {
+    top: 100px;
+  }
+  .footer-inner {
+    max-width: 1720px;
+    padding: 0 140px;
+  }
+}
+/*-------------- LAPTOP M/S --------------*/
+@media (max-width: 1336px) {
+  .navi-container {
+    display: none;
+  }
+  .mobile-navi-container {
+    display: flex;
+    padding: 0 140px;
+  }
+  .feature {
+    min-width: 242px;
+  }
+  .rooms-container {
+    max-width: 1361px;
+    padding: 35px 140px 120px 140px;
+  }
+  .slider-container {
+    width: 65%;
+  }
+  .galery-container {
+    max-width: 1024px;
+    padding: 120px 140px;
+  }
+  .galery-container > h1 {
+    top: 35px;
+  }
+  .contacts-container {
+    padding: 120px 140px;
+  }
+  .contacts-container > h1 {
+    top: 35px;
+  }
+}
+/*-------------- TABLETS --------------*/
+@media (orientation: portrait) and (max-width: 1336px) {
+  .room-info-block {
+    flex-direction: column;
+  }
+  .slider-container {
+    width: 100%;
+  }
+  .room-txt-container {
+    width: 100%;
+    align-items: center;
+  }
+  .contacts-block {
+    flex-direction: column;
+  }
+  iframe {
+    max-width: 744px;
+    width: 100%;
+    max-height: none;
+  }
+  .contacts-info-block {
+    max-width: 100%;
+  }
+  .footer-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-contacts-container {
+    max-width: 350px;
+  }
+  .footer-contacts-container > h3 {
+    text-align: center;
+  }
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .mobile-navi-container {
+    padding: 0 30px;
+  }
+  .about-us-container {
+    max-width: 1024px;
+    padding: 120px 30px;
+  }
+  .footer-inner {
+    padding: 0 30px;
+  }
+  .rooms-container {
+    padding: 35px 30px;
+  }
+  .galery-container {
+    padding: 120px 110px;
+  }
+  .reviews-container {
+    padding: 120px 30px;
+  }
+  .contacts-container {
+    padding: 120px 30px;
+  }
+  iframe {
+    max-width: 992px;
+    max-height: none;
+  }
+}
+/*-------------- SMARTPHONES --------------*/
+@media (orientation: portrait) and (max-width: 645px) {
+  .mobile-navi-container {
+    padding: 0 15px;
+  }
+  .about-us-container {
+    padding: 120px 15px;
+  }
+  .footer-inner {
+    padding: 0 15px;
+  }
+  .rooms-buttons-chain {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+    gap: 15px;
+    margin: 0 15px;
+  }
+  .rooms-buttons-chain::-webkit-scrollbar {
+    display: none;
+  }
+  .rooms-container {
+    padding: 90px 15px 30px 15px;
+    gap: 15px;
+  }
+  .room-info-block {
+    padding: 10px;
+    gap: 15px;
+    border-radius: 30px;
+  }
+  .slider-container > img {
+    border-radius: 20px;
+  }
+  #rooms-next-button {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    top: 0;
+    padding: 0 10px 0 0;
+    border-radius: 0;
+    justify-content: flex-end;
+  }
+  #rooms-prev-button {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    top: 0;
+    padding: 0 0 0 10px;
+    border-radius: 0;
+    justify-content: flex-start;
+  }
+  .reviews-container {
+    padding: 90px 15px;
+  }
+  .reviews-block {
+    gap: 10px;
+  }
+  #reviews-prev-btn {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border-radius: 0;
+    content: url("/img/icons/buttons/prev-btn-accent.svg");
+  }
+  #reviews-next-btn {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border-radius: 0;
+    content: url("/img/icons/buttons/next-btn-accent.svg");
+  }
+  #reviews-next-btn:hover, #reviews-prev-btn:hover {
+    box-shadow: none;
+  }
+  .galery-container {
+    padding: 90px 10px;
+  }
+  .galery-container > h1 {
+    top: 120px;
+  }
+  .galery-block > img {
+    border-radius: 30px;
+    width: 85%;
+  }
+  .contacts-container {
+    padding: 160px 30px 30px 30px;
+  }
+  .contacts-container > h1 {
+    top: 100px;
+  }
+  .contacts-block {
+    gap: 30px;
+  }
+  iframe {
+    max-height: 400px;
+  }
+}
+@media (orientation: portrait) and (max-height: 860px) {
+  .contacts-container {
+    padding: 160px 15px 30px 15px;
+  }
+  iframe {
+    max-height: 200px;
+  }
+}
+/*
+@media (max-width: 1720px) {
+
+
+  --------- About us ---------
+  .about-us-container{
+    padding: 120px 140px;
+  }
+  .navi-container{
+    padding: 0 140px;
+  }
+  .footer-inner{
+    padding: 0 140px;
+  }
+
+
+  /*--------- Rooms ---------
+  .rooms-container {
+    padding: 120px 140px;
+  }
+}
+
+@media (max-width: 1536px){
+
+  .feature {
+    min-width: 332px;
+  }
+  .rooms-container{
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1350px){
+  .navi-container{
+    display: flex;
+    top: 35px; 
+    left: 50%; 
+    transform: translate(-50%, -50%)
+  }
+}
+
+@media (max-width: 1349px){
+  //About us page
+  .mobile-navi-container{
+    display: flex;
+    padding: 0 140px;
+  }
+  .copyright-container > h3, .footer-contacts-container > h3{
+    max-width: 260px;
+    text-wrap: wrap;
+  }
+
+  //Reviews page
+
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.125rem;
+  }
+  h3{
+    font-size: 0.85rem;
+  }
+  h5{
+    font-size: 1.125rem;
+  }
+  button{
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1336px) {
+  .rooms-container{
+    padding: 40px 140px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .feature {
+    min-width: 313px;
+  }
+}
+
+@media (max-width: 1109px) {
+  .feature{
+    min-width: 355px;
+  }
+}
+
+@media (max-width: 1024px) {
+  //About us page
+  .footer-inner{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+  .copyright-container > h3, .footer-contacts-container > h3{
+    max-width: none;
+    text-wrap: nowrap;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  //About us page
+  .about-us-container{
+    max-width: 900px;
+    padding: 30px;
+    margin: 240px 0 120px 0;
+  }
+  .mobile-navi-container{
+    max-width: 900px;
+    padding: 0 30px;
+  }
+  .footer-inner{
+    padding: 0 30px;
+  }
+  #logo-img{
+    width: 25vw;
+  }
+  #hotel-word{
+    width: 25vw;
+  }
+  #white-lotus-word{
+    width: 92vw;
+  }
+  #motto-word{
+    width: 65vw;
+  }
+
+  .reviews-container{
+    max-width: 900px;
+    padding: 0 30px 120px 30px;
+
+  }
+
+  //Rooms page
+  .rooms-container{
+    max-width: 900px;
+    padding: 120px 30px;
+  }
+
+  //Reviews page
+}
+
+@media (max-width: 768px) {
+
+  .feature{
+    border-radius: 22.5px;
+  }
+  .room-info-container{
     border-radius: 45px;
     padding: 22.5px;
   }
-  .room-info-container > img {
+  .slider-container > img{
     border-radius: 22.5px;
   }
-  button {
-    border-radius: 15px;
-  }
-  .rewiev-inner-container {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .review-card > img {
-    width: 115px;
-  }
-  .galery-block {
-    gap: 20px;
-  }
-  .counter-dot {
-    width: 5px;
-    height: 5px;
-  }
-  .counter-dot.active {
-    width: 7px;
-    height: 7px;
-  }
-  .counter-container {
-    padding: 5px 12px;
+}
+
+@media (max-width: 645px) {
+  .rooms-buttons-chain{
+    overflow-x: scroll;
+    width: 100%;
+    margin: 0 30px;
   }
 }
-@media screen and (min-height: 1196px) {
-  #contacts-footer {
-    position: absolute;
-    bottom: 0;
+
+@media (max-width: 500px) {
+  //About us page
+  .about-us-container{
+    padding: 15px;
   }
-}/*# sourceMappingURL=main.css.map */
+  .mobile-navi-container{
+    max-width: 500px;
+    padding: 0 15px;
+  }
+  .footer-inner{
+    padding: 0 15px;
+  }
+  .copyright-container > h3, .footer-contacts-container > h3{
+    max-width: 260px;
+    text-wrap: wrap;
+  }
+
+  //Rooms page
+  .rooms-container{
+    max-width: 500px;
+    padding: 120px 15px;
+  }
+
+  .rooms-buttons-chain{
+    overflow-x: scroll;
+    width: 100%;
+    margin: 0;
+  }
+
+  //Reviews page
+}
+
+@media (max-width: 425px) {
+  .next, .prev {
+    border-radius: 12.75px;
+  }
+  .next{
+    padding: 9px 11.25px 6px 12px;
+  }
+  .prev{
+    padding: 9px 12px 6px 11.25px;
+  }
+  .counter-dot{
+    width: 5.25px;
+    height: 5.25px;
+  }
+  .counter-dot.active{
+    width: 6.75px;
+    height: 6.75px;
+  }
+}
+
+@media (max-width: 385px) {
+
+  .feature{
+    min-width: 302px;
+  }
+
+}*//*# sourceMappingURL=main.css.map */

@@ -7,9 +7,25 @@
   <title>Отель Белый Лотос</title>
 </head>
 <body>
+  <div class="mobile-navi-container" id="mobile-navi-container">
+    <div class="container" id="mobile-navi-block">
+      <button id="burger-button" onclick="showBurgerMenu()"><img id="burger-item-top" src="img/icons/buttons/burger-button.svg"><img id="burger-item-center" src="img/icons/buttons/burger-button.svg"><img id="burger-item-down" src="img/icons/buttons/burger-button.svg">
+      <button id="burger-order-btn">Забронировать</button>
+      <div id="mobile-navi-list">
+        <a class="navi-link" href="#"><h4 style="color: #F9F9F9;">contact@whitelotus.ru</h4></a>
+        <a class="navi-link" href="index.html"><h4 style="color: #F9F9F9;">О НАС</h4></a>
+        <a class="navi-link" href="rooms.html"><h4 style="font-weight: 800; color: #F9F9F9;">НОМЕРА</h4></a>
+        <a class="navi-link" href="reviews.html"><h4 style="color: #F9F9F9;">ОТЗЫВЫ</h4></a>
+        <a class="navi-link" href="galery.html"><h4 style="color: #F9F9F9;">ГАЛЕРЕЯ</h4></a>
+        <a class="navi-link" href="contacts.html"><h4 style="color: #F9F9F9;">КОНТАКТЫ</h4></a>
+        <a class="navi-link" href="#"><h4 style="color: #F9F9F9;">+7 (982) 220-10-10</h4></a>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="navi-container">
-      <header class="navi">
+      <header class="navi-block">
         <a class="navi-link" href="#"><h4>contact@whitelotus.ru</h4></a>
         <a class="navi-link" href="index.html"><h4>О НАС</h4></a>
         <a class="navi-link" href="rooms.html"><h4 style="font-weight: 800; color: #46BF76;">НОМЕРА</h4></a>
@@ -26,6 +42,7 @@
     <div class="rooms-container">
         <h1>Номера</h1>
         <div class="rooms-buttons-chain">
+          <div class="rooms-button-chain-shadow"></div>
           <button class="rooms-dot" onclick="currentRoom(1)">Стандарт</button>
           <button class="rooms-dot" onclick="currentRoom(2)">Стандарт+</button>
           <button class="rooms-dot" onclick="currentRoom(3)">Семейный</button>
@@ -33,7 +50,7 @@
         </div>
   
   
-        <div class="prices-table-cotainer fade" id="prices-overlay-1">
+        <div class="prices-table-container fade" id="prices-overlay-1">
           <div class="prices-table-block">
             <button class="exit-button" onclick="closePricesOverlay('prices-overlay-1')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
             <h1>Таблица цен Стандарт</h1>
@@ -58,7 +75,7 @@
           </div>
         </div>
   
-        <div class="prices-table-cotainer fade" id="prices-overlay-2">
+        <div class="prices-table-container fade" id="prices-overlay-2">
           <div class="prices-table-block">
             <button class="exit-button" onclick="closePricesOverlay('prices-overlay-2')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
             <h1>Таблица цен Стандарт+</h1>
@@ -83,7 +100,7 @@
           </div>
         </div>
   
-        <div class="prices-table-cotainer fade" id="prices-overlay-3">
+        <div class="prices-table-container fade" id="prices-overlay-3">
           <div class="prices-table-block">
             <button class="exit-button" onclick="closePricesOverlay('prices-overlay-3')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
             <h1>Таблица цен Семейный</h1>
@@ -108,7 +125,7 @@
           </div>
         </div>
   
-        <div class="prices-table-cotainer fade" id="prices-overlay-4">
+        <div class="prices-table-container fade" id="prices-overlay-4">
           <div class="prices-table-block">
             <button class="exit-button" onclick="closePricesOverlay('prices-overlay-4')"><img src="img/icons/buttons/exit-icon.svg" style="height: 23px; width: 25px;"></button>
             <h1>Таблица цен Семейный+</h1>
@@ -134,16 +151,16 @@
         </div>
   
   
-        <div class="room-info-block fade" id="room-index-1">
-          <div class="room-info-container fade">
+        <div class="room-info-container fade" id="room-index-1">
+          <div class="room-info-block">
             <div class="slider-container">
-              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/hall.jpg">
-              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/bedroom_1.jpg">
-              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/bedroom_2.jpg">
-              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/bedroom_3.jpg">
-              <img class="img-slides fade" id="slide-index-1" src="img/rooms/standart/bathroom.jpg">
-              <button class="prev" onclick="plusSlides('1',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
-              <button class="next" onclick="plusSlides('1',1)"><img src="img/icons/buttons/next-icon.svg"></button>
+              <img class="img-slides fade" id="slide-index-1" onclick="plusSlides('1',1)" src="img/rooms/standart/hall.jpg">
+              <img class="img-slides fade" id="slide-index-1" onclick="plusSlides('1',1)" src="img/rooms/standart/bedroom_1.jpg">
+              <img class="img-slides fade" id="slide-index-1" onclick="plusSlides('1',1)" src="img/rooms/standart/bedroom_2.jpg">
+              <img class="img-slides fade" id="slide-index-1" onclick="plusSlides('1',1)" src="img/rooms/standart/bedroom_3.jpg">
+              <img class="img-slides fade" id="slide-index-1" onclick="plusSlides('1',1)" src="img/rooms/standart/bathroom.jpg">
+              <button class="prev" id="rooms-prev-button" onclick="plusSlides('1',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+              <button class="next" id="rooms-next-button" onclick="plusSlides('1',1)"><img src="img/icons/buttons/next-icon.svg"></button>
               <div class="counter-container">
                 <span class="counter-dot" id="dot-index-1" onclick="currentSlide('room-index-1',1)"></span>
                 <span class="counter-dot" id="dot-index-1" onclick="currentSlide('room-index-1',2)"></span>
@@ -178,16 +195,16 @@
           </div>
         </div>
   
-        <div class="room-info-block fade" id="room-index-2">
-          <div class="room-info-container">
+        <div class="room-info-container fade" id="room-index-2">
+          <div class="room-info-block">
             <div class="slider-container">
-              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/hall.jpg">
-              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/bedroom_1.jpg">
-              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/bedroom_1_rev.jpg">
-              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/bedroom_2.jpg">
-              <img class="img-slides fade" id="slide-index-2" src="img/rooms/standart_plus/bedroom_2_rev.jpg">
-              <button class="prev" onclick="plusSlides('2',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
-              <button class="next" onclick="plusSlides('2',1)"><img src="img/icons/buttons/next-icon.svg"></button>
+              <img class="img-slides fade" id="slide-index-2" onclick="plusSlides('2',1)" src="img/rooms/standart_plus/hall.jpg">
+              <img class="img-slides fade" id="slide-index-2" onclick="plusSlides('2',1)" src="img/rooms/standart_plus/bedroom_1.jpg">
+              <img class="img-slides fade" id="slide-index-2" onclick="plusSlides('2',1)" src="img/rooms/standart_plus/bedroom_1_rev.jpg">
+              <img class="img-slides fade" id="slide-index-2" onclick="plusSlides('2',1)" src="img/rooms/standart_plus/bedroom_2.jpg">
+              <img class="img-slides fade" id="slide-index-2" onclick="plusSlides('2',1)" src="img/rooms/standart_plus/bedroom_2_rev.jpg">
+              <button class="prev" id="rooms-prev-button" onclick="plusSlides('2',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+              <button class="next" id="rooms-next-button" onclick="plusSlides('2',1)"><img src="img/icons/buttons/next-icon.svg"></button>
               <div class="counter-container">
                 <span class="counter-dot" id="dot-index-2" onclick="currentSlide('room-index-2',1)"></span>
                 <span class="counter-dot" id="dot-index-2" onclick="currentSlide('room-index-2',2)"></span>
@@ -223,17 +240,17 @@
           </div>
         </div>
   
-        <div class="room-info-block fade" id="room-index-3">
-          <div class="room-info-container">
+        <div class="room-info-container fade" id="room-index-3">
+          <div class="room-info-block">
             <div class="slider-container">
-              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_1.jpg">
-              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_1_rev.jpg">
-              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_1_rev_2.jpg">
-              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_2.jpg">
-              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bedroom_2_rev.jpg">
-              <img class="img-slides fade" id="slide-index-3" src="img/rooms/family/bathroom.jpg">
-              <button class="prev" onclick="plusSlides('3',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
-              <button class="next" onclick="plusSlides('3',1)"><img src="img/icons/buttons/next-icon.svg"></button>
+              <img class="img-slides fade" id="slide-index-3" onclick="plusSlides('3',1)" src="img/rooms/family/bedroom_1.jpg">
+              <img class="img-slides fade" id="slide-index-3" onclick="plusSlides('3',1)" src="img/rooms/family/bedroom_1_rev.jpg">
+              <img class="img-slides fade" id="slide-index-3" onclick="plusSlides('3',1)" src="img/rooms/family/bedroom_1_rev_2.jpg">
+              <img class="img-slides fade" id="slide-index-3" onclick="plusSlides('3',1)" src="img/rooms/family/bedroom_2.jpg">
+              <img class="img-slides fade" id="slide-index-3" onclick="plusSlides('3',1)" src="img/rooms/family/bedroom_2_rev.jpg">
+              <img class="img-slides fade" id="slide-index-3" onclick="plusSlides('3',1)" src="img/rooms/family/bathroom.jpg">
+              <button class="prev" id="rooms-prev-button" onclick="plusSlides('3',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+              <button class="next" id="rooms-next-button" onclick="plusSlides('3',1)"><img src="img/icons/buttons/next-icon.svg"></button>
               <div class="counter-container">
                 <span class="counter-dot" id="dot-index-3" onclick="currentSlide('room-index-3',1)"></span>
                 <span class="counter-dot" id="dot-index-3" onclick="currentSlide('room-index-3',2)"></span>
@@ -271,16 +288,16 @@
           </div>
         </div>
   
-        <div class="room-info-block fade" id="room-index-4">
-          <div class="room-info-container">
+        <div class="room-info-container fade" id="room-index-4">
+          <div class="room-info-block">
             <div class="slider-container">
-              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bedroom_1.jpg">
-              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bedroom_1_rev.jpg">
-              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bedroom_2.jpg">
-              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bedroom_2_rev.jpg">
-              <img class="img-slides fade" id="slide-index-4" src="img/rooms/family_plus/bathroom.jpg">
-              <button class="prev" onclick="plusSlides('4',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
-              <button class="next" onclick="plusSlides('4',1)"><img src="img/icons/buttons/next-icon.svg"></button>
+              <img class="img-slides fade" id="slide-index-4" onclick="plusSlides('4',1)" src="img/rooms/family_plus/bedroom_1.jpg">
+              <img class="img-slides fade" id="slide-index-4" onclick="plusSlides('4',1)" src="img/rooms/family_plus/bedroom_1_rev.jpg">
+              <img class="img-slides fade" id="slide-index-4" onclick="plusSlides('4',1)" src="img/rooms/family_plus/bedroom_2.jpg">
+              <img class="img-slides fade" id="slide-index-4" onclick="plusSlides('4',1)" src="img/rooms/family_plus/bedroom_2_rev.jpg">
+              <img class="img-slides fade" id="slide-index-4" onclick="plusSlides('4',1)" src="img/rooms/family_plus/bathroom.jpg">
+              <button class="prev" id="rooms-prev-button" onclick="plusSlides('4',-1)"><img src="img/icons/buttons/prev-icon.svg"></button>
+              <button class="next" id="rooms-next-button" onclick="plusSlides('4',1)"><img src="img/icons/buttons/next-icon.svg"></button>
               <div class="counter-container">
                 <span class="counter-dot" id="dot-index-4" onclick="currentSlide('room-index-4',1)"></span>
                 <span class="counter-dot" id="dot-index-4" onclick="currentSlide('room-index-4',2)"></span>
@@ -320,6 +337,7 @@
   </div>
   <script src="scripts/prices_overlay.js"></script>
   <script src="scripts\room_slider.js"></script>
+  <script src="scripts/burger-menu.js"></script>
   <footer class="footer">
     <div class="footer-inner">
       <div class="copyright-container">
@@ -328,8 +346,6 @@
       <div class="socmed-container">
         <img src="img/icons/social-medias/vk_icon.svg" alt="vk">
         <img src="img/icons/social-medias/telegram_icon.svg" alt="telegram">
-        <img src="img/icons/social-medias/insta_icon.svg" alt="inst">
-        <img src="img/icons/social-medias/fb_icon.svg" alt="facebook">
       </div>
       <div class="footer-contacts-container">
         <h3>+7 (982) 220-10-10</h3>

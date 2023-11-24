@@ -1,4 +1,4 @@
-var rooms = document.getElementsByClassName("room-info-block");
+var rooms = document.getElementsByClassName("room-info-container");
 var roomsId = [];
 var slides = document.getElementsByClassName("img-slides");
 var dots = document.getElementsByClassName("counter-dot");
