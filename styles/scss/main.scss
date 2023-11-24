@@ -39,7 +39,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   url("fonts/NT_Somic/NTSomic-Regular.ttf") format("ttf");
 }
 
-$main-font: NT Somic;
+$main-font: "NT Somic";
 
 h1,h2,h3,h4,h5 {
   font-family: $main-font;
