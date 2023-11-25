@@ -20,19 +20,24 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 
 //@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;500;700&display=swap');
 
-
+/*@font-face {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  src: url("../../");
+}*/
 
 @font-face {
   font-weight: 800;
   font-family: 'NT Somic';
   font-style: normal;
-  src: url("../fonts/nt_somic/eot/ntsomic-bold.eot");
+  src: url("../../fonts/nt_somic/eot/ntsomic-bold.eot");
   src: local("NT Somic Bd"),
-  url("../fonts/nt_somic/eot/ntsomic-bold.eot") format("embedded-truetype"),
-  url("../fonts/nt_somic/woff/ntsomic-bold.woff") format("woff"),
-  url("../fonts/nt_somic/woff2/ntsomic-bold.woff2") format("woff2"),
-  url("../fonts/nt_somic/otf/ntsomic-bold.otf") format("opentype"),
-  url("../fonts/nt_somic/ttf/ntsomic-bold.ttf") format("truetype");
+  url("../../fonts/nt_somic/eot/ntsomic-bold.eot") format("embedded-truetype"),
+  url("../../fonts/nt_somic/woff/ntsomic-bold.woff") format("woff"),
+  url("../../fonts/nt_somic/woff2/ntsomic-bold.woff2") format("woff2"),
+  url("../../fonts/nt_somic/otf/ntsomic-bold.otf") format("opentype"),
+  url("../../fonts/nt_somic/ttf/ntsomic-bold.ttf") format("truetype");
   font-display: swap;
 
 }
@@ -40,30 +45,30 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   font-weight: 600;
   font-family: 'NT Somic';
   font-style: normal;
-  src: url("../fonts/nt_somic/eot/ntsomic_medium.eot");
+  src: url("../../fonts/nt_somic/eot/ntsomic_medium.eot");
   src: local("NT Somic Med"),
-  url("../fonts/nt_somic/eot/ntsomic_medium.eot") format("embedded-truetype"),
-  url("../fonts/nt_somic/woff/ntsomic_medium.woff") format("web"),
-  url("../fonts/nt_somic/woff2/ntsomic_medium.woff2") format("web2"),
-  url("../fonts/nt_somic/otf/ntsomic_medium.otf") format("opentype"),
-  url("../fonts/nt_somic/ttf/ntsomic_medium.ttf") format("truetype");
+  url("../../fonts/nt_somic/eot/ntsomic_medium.eot") format("embedded-truetype"),
+  url("../../fonts/nt_somic/woff/ntsomic_medium.woff") format("web"),
+  url("../../fonts/nt_somic/woff2/ntsomic_medium.woff2") format("web2"),
+  url("../../fonts/nt_somic/otf/ntsomic_medium.otf") format("opentype"),
+  url("../../fonts/nt_somic/ttf/ntsomic_medium.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-weight: 400;
   font-family: 'NT Somic';
   font-style: normal;
-  src: url("../fonts/nt_somic/eot/ntsomic_regular.eot");
+  src: url("../../fonts/nt_somic/eot/ntsomic_regular.eot");
   src: local("NT Somic"),
-  url("../fonts/nt_somic/eot/ntsomic_regular.eot") format("embedded-truetype"),
-  url("../fonts/nt_somic/woff/ntsomic_regular.woff") format("web"),
-  url("../fonts/nt_somic/woff2/ntsomic_regular.woff2") format("web2"),
-  url("../fonts/nt_somic/otf/ntsomic_regular.otf") format("opentype"),
-  url("../fonts/nt_somic/ttf/ntsomic_regular.ttf") format("truetype");
+  url("../../fonts/nt_somic/eot/ntsomic_regular.eot") format("embedded-truetype"),
+  url("../../fonts/nt_somic/woff/ntsomic_regular.woff") format("web"),
+  url("../../fonts/nt_somic/woff2/ntsomic_regular.woff2") format("web2"),
+  url("../../fonts/nt_somic/otf/ntsomic_regular.otf") format("opentype"),
+  url("../../fonts/nt_somic/ttf/ntsomic_regular.ttf") format("truetype");
   font-display: swap;
 }
 
-$main-font: 'NT Somic'; // 'Inter Tight', sans-serif / NT Somic
+$main-font: "NT Somic"; // 'Inter Tight', sans-serif / "NT Somic"
 
 h1,h2,h3,h4,h5 {
   font-family: $main-font;
