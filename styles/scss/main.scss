@@ -27,7 +27,8 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   font-family: 'NT Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic-bold.eot");
-  src: url("fonts/nt_somic/eot/ntsomic-bold.eot") format("embedded-truetype"),
+  src: local("NT Somic"),
+  url("fonts/nt_somic/eot/ntsomic-bold.eot") format("embedded-truetype"),
   url("fonts/nt_somic/woff/ntsomic-bold.woff") format("woff"),
   url("fonts/nt_somic/woff2/ntsomic-bold.woff2") format("woff2"),
   url("fonts/nt_somic/otf/ntsomic-bold.otf") format("opentype"),
@@ -40,7 +41,8 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   font-family: 'NT Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic_medium.eot");
-  src: url("fonts/nt_somic/eot/ntsomic_medium.eot") format("embedded-truetype"),
+  src: local("NT Somic"),
+  url("fonts/nt_somic/eot/ntsomic_medium.eot") format("embedded-truetype"),
   url("fonts/nt_somic/woff/ntsomic_medium.woff") format("web"),
   url("fonts/nt_somic/woff2/ntsomic_medium.woff2") format("web2"),
   url("fonts/nt_somic/otf/ntsomic_medium.otf") format("opentype"),
@@ -52,7 +54,8 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   font-family: 'NT Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic_regular.eot");
-  src: url("fonts/nt_somic/eot/ntsomic_regular.eot") format("embedded-truetype"),
+  src: local("NT Somic"),
+  url("fonts/nt_somic/eot/ntsomic_regular.eot") format("embedded-truetype"),
   url("fonts/nt_somic/woff/ntsomic_regular.woff") format("web"),
   url("fonts/nt_somic/woff2/ntsomic_regular.woff2") format("web2"),
   url("fonts/nt_somic/otf/ntsomic_regular.otf") format("opentype"),
