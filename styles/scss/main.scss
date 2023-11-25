@@ -24,7 +24,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 
 @font-face {
   font-weight: 800;
-  font-family: 'NT_Somic';
+  font-family: 'NT Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic-bold.eot") format("eot"),
   url("fonts/nt_somic/otf/ntsomic-bold.otf") format("otf"),
@@ -35,7 +35,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 }
 @font-face {
   font-weight: 600;
-  font-family: 'NT_Somic';
+  font-family: 'NT Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic_medium.eot") format("eot"),
   url("fonts/nt_somic/otf/ntsomic_medium.otf") format("otf"),
@@ -45,7 +45,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 }
 @font-face {
   font-weight: 400;
-  font-family: 'NT_Somic';
+  font-family: 'NT Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic_regular.eot") format("eot"),
   url("fonts/nt_somic/otf/ntsomic_regular.otf") format("otf"),
@@ -54,7 +54,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   url("fonts/nt_somic/woff2/ntsomic_regular.woff2") format("web2");
 }
 
-$main-font: 'NT_Somic'; // 'Inter Tight', sans-serif / NT Somic
+$main-font: 'NT Somic'; // 'Inter Tight', sans-serif / NT Somic
 
 h1,h2,h3,h4,h5 {
   font-family: $main-font;
@@ -1322,229 +1322,3 @@ footer{
     max-height: 200px;
   }
 }
-/*
-@media (max-width: 1720px) {
-
-
-  --------- About us ---------
-  .about-us-container{
-    padding: 120px 140px;
-  }
-  .navi-container{
-    padding: 0 140px;
-  }
-  .footer-inner{
-    padding: 0 140px;
-  }
-
-
-  /*--------- Rooms ---------
-  .rooms-container {
-    padding: 120px 140px;
-  }
-}
-
-@media (max-width: 1536px){
-
-  .feature {
-    min-width: 332px;
-  }
-  .rooms-container{
-    gap: 15px;
-  }
-}
-
-@media (min-width: 1350px){
-  .navi-container{
-    display: flex;
-    top: 35px; 
-    left: 50%; 
-    transform: translate(-50%, -50%)
-  }
-}
-
-@media (max-width: 1349px){
-  //About us page
-  .mobile-navi-container{
-    display: flex;
-    padding: 0 140px;
-  }
-  .copyright-container > h3, .footer-contacts-container > h3{
-    max-width: 260px;
-    text-wrap: wrap;
-  }
-
-  //Reviews page
-
-  h1{
-    font-size: 2rem;
-  }
-  h2{
-    font-size: 1.125rem;
-  }
-  h3{
-    font-size: 0.85rem;
-  }
-  h5{
-    font-size: 1.125rem;
-  }
-  button{
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 1336px) {
-  .rooms-container{
-    padding: 40px 140px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .feature {
-    min-width: 313px;
-  }
-}
-
-@media (max-width: 1109px) {
-  .feature{
-    min-width: 355px;
-  }
-}
-
-@media (max-width: 1024px) {
-  //About us page
-  .footer-inner{
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 30px;
-  }
-  .copyright-container > h3, .footer-contacts-container > h3{
-    max-width: none;
-    text-wrap: nowrap;
-    text-align: center;
-  }
-}
-
-@media (max-width: 900px) {
-  //About us page
-  .about-us-container{
-    max-width: 900px;
-    padding: 30px;
-    margin: 240px 0 120px 0;
-  }
-  .mobile-navi-container{
-    max-width: 900px;
-    padding: 0 30px;
-  }
-  .footer-inner{
-    padding: 0 30px;
-  }
-  #logo-img{
-    width: 25vw;
-  }
-  #hotel-word{
-    width: 25vw;
-  }
-  #white-lotus-word{
-    width: 92vw;
-  }
-  #motto-word{
-    width: 65vw;
-  }
-
-  .reviews-container{
-    max-width: 900px;
-    padding: 0 30px 120px 30px;
-
-  }
-
-  //Rooms page
-  .rooms-container{
-    max-width: 900px;
-    padding: 120px 30px;
-  }
-
-  //Reviews page
-}
-
-@media (max-width: 768px) {
-
-  .feature{
-    border-radius: 22.5px;
-  }
-  .room-info-container{
-    border-radius: 45px;
-    padding: 22.5px;
-  }
-  .slider-container > img{
-    border-radius: 22.5px;
-  }
-}
-
-@media (max-width: 645px) {
-  .rooms-buttons-chain{
-    overflow-x: scroll;
-    width: 100%;
-    margin: 0 30px;
-  }
-}
-
-@media (max-width: 500px) {
-  //About us page
-  .about-us-container{
-    padding: 15px;
-  }
-  .mobile-navi-container{
-    max-width: 500px;
-    padding: 0 15px;
-  }
-  .footer-inner{
-    padding: 0 15px;
-  }
-  .copyright-container > h3, .footer-contacts-container > h3{
-    max-width: 260px;
-    text-wrap: wrap;
-  }
-
-  //Rooms page
-  .rooms-container{
-    max-width: 500px;
-    padding: 120px 15px;
-  }
-
-  .rooms-buttons-chain{
-    overflow-x: scroll;
-    width: 100%;
-    margin: 0;
-  }
-
-  //Reviews page
-}
-
-@media (max-width: 425px) {
-  .next, .prev {
-    border-radius: 12.75px;
-  }
-  .next{
-    padding: 9px 11.25px 6px 12px;
-  }
-  .prev{
-    padding: 9px 12px 6px 11.25px;
-  }
-  .counter-dot{
-    width: 5.25px;
-    height: 5.25px;
-  }
-  .counter-dot.active{
-    width: 6.75px;
-    height: 6.75px;
-  }
-}
-
-@media (max-width: 385px) {
-
-  .feature{
-    min-width: 302px;
-  }
-
-}*/
