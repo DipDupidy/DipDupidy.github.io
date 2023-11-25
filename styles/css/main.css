@@ -1,12 +1,6 @@
 /*---------------------------- COLORS variables ---------------------------*/
 /*---------------------- SHADOWS & BORDERS variables ----------------------*/
 /*---------------------------- FONTS settings ----------------------------*/
-/*@font-face {
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  src: url("../../");
-}*/
 @font-face {
   font-weight: 800;
   font-family: "NT Somic";
@@ -146,8 +140,6 @@ button:active {
   display: none;
   max-width: 1440px;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
   background-color: rgba(70, 191, 118, 0);
   margin: auto;
   transition: 0.65s;
@@ -859,7 +851,7 @@ footer {
 }
 
 /*---------------------------- WIFI PASSWORD OVERLAY settings ----------------------------*/
-.password-cotainer {
+.password-container {
   /*----Position---*/
   z-index: 1001;
   position: fixed;
@@ -879,7 +871,7 @@ footer {
 .password-block {
   /*----Self---*/
   display: flex;
-  width: 235px;
+  width: 240px;
   padding: 0 60px 55px 60px;
   background-color: #F9F9F9;
   border-radius: 30px 18px 30px 30px;
@@ -889,6 +881,15 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 25px;
+}
+
+.wifi-txt-container {
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
 }
 
 #password-exit-button {
