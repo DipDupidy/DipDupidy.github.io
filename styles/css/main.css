@@ -6,7 +6,7 @@
   font-family: "NT Somic";
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic-bold.eot");
-  src: local("NT Somic"), url("fonts/nt_somic/eot/ntsomic-bold.eot") format("embedded-truetype"), url("fonts/nt_somic/woff/ntsomic-bold.woff") format("woff"), url("fonts/nt_somic/woff2/ntsomic-bold.woff2") format("woff2"), url("fonts/nt_somic/otf/ntsomic-bold.otf") format("opentype"), url("fonts/nt_somic/ttf/ntsomic-bold.ttf") format("truetype");
+  src: local("NT Somic BD"), url("fonts/nt_somic/eot/ntsomic-bold.eot") format("embedded-truetype"), url("fonts/nt_somic/woff/ntsomic-bold.woff") format("woff"), url("fonts/nt_somic/woff2/ntsomic-bold.woff2") format("woff2"), url("fonts/nt_somic/otf/ntsomic-bold.otf") format("opentype"), url("fonts/nt_somic/ttf/ntsomic-bold.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
@@ -14,7 +14,7 @@
   font-family: "NT Somic";
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic_medium.eot");
-  src: local("NT Somic"), url("fonts/nt_somic/eot/ntsomic_medium.eot") format("embedded-truetype"), url("fonts/nt_somic/woff/ntsomic_medium.woff") format("web"), url("fonts/nt_somic/woff2/ntsomic_medium.woff2") format("web2"), url("fonts/nt_somic/otf/ntsomic_medium.otf") format("opentype"), url("fonts/nt_somic/ttf/ntsomic_medium.ttf") format("truetype");
+  src: local("NT Somic Med"), url("fonts/nt_somic/eot/ntsomic_medium.eot") format("embedded-truetype"), url("fonts/nt_somic/woff/ntsomic_medium.woff") format("web"), url("fonts/nt_somic/woff2/ntsomic_medium.woff2") format("web2"), url("fonts/nt_somic/otf/ntsomic_medium.otf") format("opentype"), url("fonts/nt_somic/ttf/ntsomic_medium.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
