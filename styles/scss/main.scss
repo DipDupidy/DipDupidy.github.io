@@ -24,7 +24,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 
 @font-face {
   font-weight: 800;
-  font-family: 'NT Somic';
+  font-family: 'NT_Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic-bold.eot") format("eot"),
   url("fonts/nt_somic/otf/ntsomic-bold.otf") format("otf"),
@@ -35,7 +35,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 }
 @font-face {
   font-weight: 600;
-  font-family: 'NT Somic';
+  font-family: 'NT_Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic_medium.eot") format("eot"),
   url("fonts/nt_somic/otf/ntsomic_medium.otf") format("otf"),
@@ -45,7 +45,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
 }
 @font-face {
   font-weight: 400;
-  font-family: 'NT Somic';
+  font-family: 'NT_Somic';
   font-style: normal;
   src: url("fonts/nt_somic/eot/ntsomic_regular.eot") format("eot"),
   url("fonts/nt_somic/otf/ntsomic_regular.otf") format("otf"),
@@ -54,7 +54,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   url("fonts/nt_somic/woff2/ntsomic_regular.woff2") format("web2");
 }
 
-$main-font: 'NT Somic'; // 'Inter Tight', sans-serif / NT Somic
+$main-font: 'NT_Somic'; // 'Inter Tight', sans-serif / NT Somic
 
 h1,h2,h3,h4,h5 {
   font-family: $main-font;
