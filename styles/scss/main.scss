@@ -32,6 +32,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   url("fonts/nt_somic/woff2/ntsomic-bold.woff2") format("woff2"),
   url("fonts/nt_somic/otf/ntsomic-bold.otf") format("opentype"),
   url("fonts/nt_somic/ttf/ntsomic-bold.ttf") format("truetype");
+  font-display: swap;
 
 }
 @font-face {
@@ -44,6 +45,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   url("fonts/nt_somic/woff2/ntsomic_medium.woff2") format("web2"),
   url("fonts/nt_somic/otf/ntsomic_medium.otf") format("opentype"),
   url("fonts/nt_somic/ttf/ntsomic_medium.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-weight: 400;
@@ -55,6 +57,7 @@ $blocks-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
   url("fonts/nt_somic/woff2/ntsomic_regular.woff2") format("web2"),
   url("fonts/nt_somic/otf/ntsomic_regular.otf") format("opentype"),
   url("fonts/nt_somic/ttf/ntsomic_regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 $main-font: 'NT Somic'; // 'Inter Tight', sans-serif / NT Somic
